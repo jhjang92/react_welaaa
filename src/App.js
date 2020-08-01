@@ -8,19 +8,19 @@ function App() {
       <header>
         <div className="header_top-box">
           <div className="top_user">
-            <img src="/images/icons/web-ic-person.png" alt="user 아이콘"></img>
+            <img src="images/icons/web-ic-person.png" alt="user 아이콘"></img>
             <a>로그인</a>
             <span>|</span>
             <a>윌라계정만들기</a>
           </div>
           <h1 className="top_logo">
             <a>
-              <img src="/images/web-welaaa-logo-kr.png" alt="로고"></img>
+              <img src="images/web-welaaa-logo-kr.png" alt="로고"></img>
             </a>
           </h1>
           <div className="top_search">
             <a>
-              <img src="/images/icons/cart.svg" alt="장바구니"></img>
+              <img src="images/icons/cart.svg" alt="장바구니"></img>
             </a>
             <div className="top_search_box">
               <input
@@ -28,7 +28,7 @@ function App() {
                 placeholder="키워드 혹은 강사/저자를 입력"
               ></input>
               <button className="top_search_btn">
-                <img src="/images/icons/web-ic-search.png" alt="검색"></img>
+                <img src="images/icons/web-ic-search.png" alt="검색"></img>
               </button>
             </div>
           </div>
@@ -40,7 +40,7 @@ function App() {
           <div className="header_snb-box">
             <a href="#">
               <img
-                src="/images/icons/b-2-b-gnb-new@2x.png"
+                src="images/icons/b-2-b-gnb-new@2x.png"
                 alt="새로운소식"
               ></img>
               <span>B2B서비스</span>
@@ -60,7 +60,7 @@ function App() {
               <br />
               <span>브랜드 캠페인 보기</span>
               <img
-                src="/images/introduce/ic_play_small.png"
+                src="images/introduce/ic_play_small.png"
                 alt="영상 재생하기"
               ></img>
             </button>
@@ -69,7 +69,7 @@ function App() {
               <br />
               <span>지금 바로 시작하세요!</span>
               <img
-                src="/images/introduce/ic_more_small.png"
+                src="images/introduce/ic_more_small.png"
                 alt="멤버쉽 사용하기"
               ></img>
             </button>
@@ -79,7 +79,7 @@ function App() {
           <h2>책을 음악처럼 편안하게 무제한으로 듣다.</h2>
           <figure>
             <img
-              src="/images/web-banner/200525_PC2.png"
+              src="images/web-banner/200525_PC2.png"
               alt="책 읽을 시간이 없을땐 윌라"
             ></img>
             <figcaption>
@@ -111,14 +111,14 @@ function App() {
               </p>
             </figcaption>
             <img
-              src="/images/web-banner/200525_PC3.png"
+              src="images/web-banner/200525_PC3.png"
               alt="책 한권도 안되는 가격에 무제한"
             ></img>
           </figure>
         </section>
         <section className="section_banner4-introduce">
           <figure>
-            <img src="/images/web-banner/200723_PC4-2.png"></img>
+            <img src="images/web-banner/200723_PC4-2.png"></img>
             <figcaption>
               <p>
                 멀게만 느껴지는 어려운 지식을 어떻게 하면 <br />더
@@ -153,7 +153,7 @@ function App() {
                 <li>
                   <a href="#">
                     <img
-                      src="/images/slide/classSlide/series_064_app.jpg"
+                      src="images/slide/classSlide/series_064_app.jpg"
                       alt="미래학자의 퓨처리포트"
                     ></img>
                   </a>
@@ -161,7 +161,7 @@ function App() {
                 <li>
                   <a href="#">
                     <img
-                      src="/images/slide/classSlide/eries_064_app.jpg"
+                      src="images/slide/classSlide/eries_064_app.jpg"
                       alt="미래학자의 퓨처리포트"
                     ></img>
                   </a>
@@ -169,7 +169,7 @@ function App() {
                 <li>
                   <a href="#">
                     <img
-                      src="/images/slide/classSlide/eries_064_app.jpg"
+                      src="images/slide/classSlide/eries_064_app.jpg"
                       alt="미래학자의 퓨처리포트"
                     ></img>
                   </a>
@@ -177,7 +177,7 @@ function App() {
                 <li>
                   <a href="#">
                     <img
-                      src="/images/slide/classSlide/eries_064_app.jpg"
+                      src="images/slide/classSlide/eries_064_app.jpg"
                       alt="미래학자의 퓨처리포트"
                     ></img>
                   </a>
@@ -185,7 +185,7 @@ function App() {
                 <li>
                   <a href="#">
                     <img
-                      src="/images/slide/classSlide/eries_064_app.jpg"
+                      src="images/slide/classSlide/eries_064_app.jpg"
                       alt="미래학자의 퓨처리포트"
                     ></img>
                   </a>
@@ -193,13 +193,13 @@ function App() {
               </ul>
               <button type="button">
                 <img
-                  src="/images/introduce/ic-angle-left-primary-xl.png"
+                  src="images/introduce/ic-angle-left-primary-xl.png"
                   alt="왼쪽버튼"
                 ></img>
               </button>
               <button type="button">
                 <img
-                  src="/images/introduce/ic-angle-right-primary-xl.png"
+                  src="images/introduce/ic-angle-right-primary-xl.png"
                   alt="오른쪽버튼"
                 ></img>
               </button>
@@ -213,13 +213,10 @@ function App() {
             <ul className="section_list-content">
               <li>
                 <figure>
-                  <img
-                    src="/images/introduce/5_1.png"
-                    alt="유튜브 안내서"
-                  ></img>
+                  <img src="images/introduce/5_1.png" alt="유튜브 안내서"></img>
                   <a href="#">
                     <img
-                      src="/images/introduce/ic_play.png"
+                      src="images/introduce/ic_play.png"
                       alt="보러가기"
                     ></img>
                   </a>
@@ -231,10 +228,10 @@ function App() {
               </li>
               <li>
                 <figure>
-                  <img src="/images/introduce/5_.png" alt="유튜브 안내서"></img>
+                  <img src="images/introduce/5_.png" alt="유튜브 안내서"></img>
                   <a href="#">
                     <img
-                      src="/images/introduce/ic_play.png"
+                      src="images/introduce/ic_play.png"
                       alt="보러가기"
                     ></img>
                   </a>
@@ -246,10 +243,10 @@ function App() {
               </li>
               <li>
                 <figure>
-                  <img src="/images/introduce/5_.png" alt="유튜브 안내서"></img>
+                  <img src="images/introduce/5_.png" alt="유튜브 안내서"></img>
                   <a href="#">
                     <img
-                      src="/images/introduce/ic_play.png"
+                      src="images/introduce/ic_play.png"
                       alt="보러가기"
                     ></img>
                   </a>
@@ -261,10 +258,10 @@ function App() {
               </li>
               <li>
                 <figure>
-                  <img src="/images/introduce/5_.png" alt="유튜브 안내서"></img>
+                  <img src="images/introduce/5_.png" alt="유튜브 안내서"></img>
                   <a href="#">
                     <img
-                      src="/images/introduce/ic_play.png"
+                      src="images/introduce/ic_play.png"
                       alt="보러가기"
                     ></img>
                   </a>
@@ -304,7 +301,7 @@ function App() {
                         <p>존리의 부자되기 습관</p>
                         <div>
                           <img
-                            src="/images/7712-2-1591605517376.jpg"
+                            src="images/7712-2-1591605517376.jpg"
                             alt="존리"
                           ></img>
                           <p>저자</p>
@@ -321,7 +318,7 @@ function App() {
                         <p>존리의 부자되기 습관</p>
                         <div>
                           <img
-                            src="/images/7887-2-1591605696219.jpg"
+                            src="images/7887-2-1591605696219.jpg"
                             alt="이케이도 준"
                           ></img>
                           <p>저자</p>
@@ -334,13 +331,13 @@ function App() {
               </ul>
               <button type="button">
                 <img
-                  src="/images/introduce/ic-angle-left-primary-xl.png"
+                  src="images/introduce/ic-angle-left-primary-xl.png"
                   alt="왼쪽버튼"
                 ></img>
               </button>
               <button type="button">
                 <img
-                  src="/images/introduce/ic-angle-right-primary-xl.png"
+                  src="images/introduce/ic-angle-right-primary-xl.png"
                   alt="오른쪽버튼"
                 ></img>
               </button>
@@ -355,12 +352,12 @@ function App() {
               <li>
                 <figure>
                   <img
-                    src="/images/introduce/7_1.png"
+                    src="images/introduce/7_1.png"
                     alt="명견만리_불평등, 병리, 금융, 지역 편"
                   ></img>
                   <a href="#">
                     <img
-                      src="/images/introduce/ic_play.png"
+                      src="images/introduce/ic_play.png"
                       alt="보러가기"
                     ></img>
                   </a>
@@ -372,10 +369,10 @@ function App() {
               </li>
               <li>
                 <figure>
-                  <img src="/images/introduce/5_.png" alt="유튜브 안내서"></img>
+                  <img src="images/introduce/5_.png" alt="유튜브 안내서"></img>
                   <a href="#">
                     <img
-                      src="/images/introduce/ic_play.png"
+                      src="images/introduce/ic_play.png"
                       alt="보러가기"
                     ></img>
                   </a>
@@ -387,10 +384,10 @@ function App() {
               </li>
               <li>
                 <figure>
-                  <img src="/images/introduce/5_.png" alt="유튜브 안내서"></img>
+                  <img src="images/introduce/5_.png" alt="유튜브 안내서"></img>
                   <a href="#">
                     <img
-                      src="/images/introduce/ic_play.png"
+                      src="images/introduce/ic_play.png"
                       alt="보러가기"
                     ></img>
                   </a>
@@ -402,10 +399,10 @@ function App() {
               </li>
               <li>
                 <figure>
-                  <img src="/images/introduce/5_.png" alt="유튜브 안내서"></img>
+                  <img src="images/introduce/5_.png" alt="유튜브 안내서"></img>
                   <a href="#">
                     <img
-                      src="/images/introduce/ic_play.png"
+                      src="images/introduce/ic_play.png"
                       alt="보러가기"
                     ></img>
                   </a>
@@ -422,7 +419,7 @@ function App() {
           <header>
             <h3>
               <img
-                src="/images/introduce/bookbox_title.png"
+                src="images/introduce/bookbox_title.png"
                 alt="북크박스"
               ></img>
             </h3>
@@ -501,7 +498,7 @@ function App() {
           <ul>
             <li>
               <figure>
-                <img src="/images/introduce/10_1.png"></img>
+                <img src="images/introduce/10_1.png"></img>
                 <figcaption>
                   <strong>더 편하게 보세요!</strong>
                   <p>교육계 최초로 세로 영상을 도입했습니다.</p>
@@ -537,7 +534,7 @@ function App() {
         </section>
         <section className="section_banner-ad">
           <img
-            src="/images/static/banner-web/오디오북카드지갑_1920x150.jpg"
+            src="images/static/banner-web/오디오북카드지갑_1920x150.jpg"
             alt="오디오북카드지갑"
           ></img>
         </section>
@@ -565,7 +562,7 @@ function App() {
             <li>
               <a href="#">
                 <img
-                  src="/images/icons/footer-ic-naver.png"
+                  src="images/icons/footer-ic-naver.png"
                   alt="네이버 블로그"
                 ></img>
               </a>
@@ -573,7 +570,7 @@ function App() {
             <li>
               <a href="#">
                 <img
-                  src="/images/icons/footer-ic-fb.png"
+                  src="images/icons/footer-ic-fb.png"
                   alt="페이스북 윌라"
                 ></img>
               </a>
@@ -581,7 +578,7 @@ function App() {
             <li>
               <a href="#">
                 <img
-                  src="/images/icons/footer-ic-pencil.png"
+                  src="images/icons/footer-ic-pencil.png"
                   alt="네이버 포스트"
                 ></img>
               </a>
@@ -589,7 +586,7 @@ function App() {
             <li>
               <a href="#">
                 <img
-                  src="/images/icons/footer-ic-youtube.png"
+                  src="images/icons/footer-ic-youtube.png"
                   alt="유튜브 윌라"
                 ></img>
               </a>
