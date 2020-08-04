@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 function Header() {
   const Header = styled.header`
     height: 170px;
@@ -20,7 +19,7 @@ function Header() {
     }
     @media (max-width: 1599px) and (min-width: 1024px) {
       width: 1000px;
-      justify-content: space-around;
+      justify-content: space-between;
     }
   `;
   const HeaderTopUserBox = styled.div`
@@ -38,8 +37,11 @@ function Header() {
       margin-right: 0;
     }
     span {
-      margin-right: 20px;
-      color: #555555;
+      width: 1px;
+      height: 13px;
+      margin-right: 19px;
+      background-color: #dddddd;
+      box-sizing: border-box;
     }
   `;
   const HeaderTopLogo = styled.h1`
@@ -101,13 +103,13 @@ function Header() {
     justify-content: space-between;
     @media (max-width: 1599px) and (min-width: 1024px) {
       width: 1000px;
-      justify-content: space-around;
+      justify-content: space-between;
     }
   `;
   const HeaderGnbNav = styled.nav`
     ul {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       li {
         height: 50px;
         line-height: 50px;
@@ -173,12 +175,16 @@ function Header() {
         <HeaderTopUserBox className="top_user">
           <img src="images/icons/web-ic-person.png" alt="user 아이콘"></img>
           <a>로그인</a>
-          <span>|</span>
+          <span></span>
           <a>윌라계정만들기</a>
         </HeaderTopUserBox>
         <HeaderTopLogo className="top_logo">
           <a href="#">
-            <img src="images/web-welaaa-logo-kr.png" alt="로고"></img>
+            <img
+              src="images/web-welaaa-logo-kr.png"
+              // src="react_welaaa/images/web-welaaa-logo-kr.png"
+              alt="로고"
+            ></img>
           </a>
         </HeaderTopLogo>
         <HeaderTopSearch className="top_search">

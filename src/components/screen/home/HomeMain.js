@@ -10,28 +10,43 @@ import IntroduceInfoAudioBook1 from "./IntroduceInfoAudioBook1";
 import IntroduceInfoAudioBook2 from "./IntroduceInfoAudioBook2";
 import IntroduceMembership from "./IntroduceMembership";
 import IntroduceAdBanner from "./IntroduceAdBanner";
+
+import styled from "styled-components";
+
 function HomeMain() {
+  const HomeMain = styled.main`
+    overflow: hidden;
+  `;
+  const IntroduceBannerBox = styled.div``;
+  const IntroduceClassWelaaaBox = styled.div``;
+  const IntroduceAudioBookBox = styled.div``;
   return (
-    <main>
+    <HomeMain>
       {/* 섹션마다 백그라운드이미지 추가하기. 1200 / 640 cover */}
       {/* Banner Section */}
-      <IntroduceBanner1 />
-      <IntroduceBanner2 />
-      <IntroduceBanner3 />
-      <IntroduceBanner4 />
+      <IntroduceBannerBox className="IntroduceBanner">
+        <IntroduceBanner1 />
+        <IntroduceBanner2 />
+        <IntroduceBanner3 />
+        <IntroduceBanner4 />
+      </IntroduceBannerBox>
       {/* classBook Section */}
-      <IntroduceClassWelaaa />
+      <IntroduceClassWelaaaBox className="IntroduceClassWelaaa">
+        <IntroduceClassWelaaa />
+      </IntroduceClassWelaaaBox>
       {/* audioBook Section */}
-      <IntroduceAudioBook />
-      <IntroduceBookBox />
+      <IntroduceAudioBookBox className="IntroduceAudioBook">
+        <IntroduceAudioBook />
+        <IntroduceBookBox />
 
-      {/* info section */}
-      <IntroduceInfoAudioBook1 />
-      <IntroduceInfoAudioBook2 />
+        {/* info section */}
+        <IntroduceInfoAudioBook1 />
+        <IntroduceInfoAudioBook2 />
+      </IntroduceAudioBookBox>
       {/* Ad */}
       <IntroduceMembership />
       <IntroduceAdBanner />
-    </main>
+    </HomeMain>
   );
 }
 
