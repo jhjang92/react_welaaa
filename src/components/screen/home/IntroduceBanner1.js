@@ -8,8 +8,7 @@ function IntroduceBanner1() {
     position: relative;
   `;
   const SectionBannerBox = styled.section`
-    background: url("/images/web-banner/200525_PC1.jpg") center / cover
-      no-repeat;
+    background: url("images/web-banner/200525_PC1.jpg") center / cover no-repeat;
     width: 1200px;
     height: 640px;
     margin: 0 auto;
@@ -47,6 +46,9 @@ function IntroduceBanner1() {
         color: rgb(51, 51, 51);
         :first-of-type {
           font-weight: 600;
+        }
+        :last-of-type {
+          font-weight: 400;
         }
       }
 
