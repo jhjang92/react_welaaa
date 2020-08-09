@@ -1,11 +1,46 @@
 import React from "react";
+import styled from "styled-components";
 
 function IntroduceBanner4() {
+  const SectionBanner = styled.section`
+    background: url("images/web-banner/200723_PC4-1.jpg") center / cover;
+
+    height: 570px;
+
+    h2 {
+      margin: 0;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+  `;
+  const FlexBox = styled.div`
+    width: 1044px;
+    margin: 80px auto 0;
+
+    display: flex;
+    flex-direction: column;
+    padding-left: 22px;
+    img {
+      width: 638px;
+      margin-bottom: 30px;
+    }
+  `;
+  const TextBox = styled.div`
+    p {
+      color: #fff;
+      margin: 0 0 15px;
+      font-size: 16px;
+      font-weight: 200;
+    }
+  `;
   return (
-    <section className="section_banner4-introduce">
-      <figure>
-        <img src="images/web-banner/200723_PC4-2.png"></img>
-        <figcaption>
+    <SectionBanner className="section_banner4-introduce">
+      <h2>BRAND STORY</h2>
+      <FlexBox>
+        <img src="images/web-banner/200723_PC4-2.png" alt="Brand Story"></img>
+        <TextBox>
           <p>
             멀게만 느껴지는 어려운 지식을 어떻게 하면 <br />더 많은사람들에게 더
             가까이 다가갈 수 있을까요?
@@ -20,9 +55,9 @@ function IntroduceBanner4() {
             당신의 편안하고 쉬운 지식 생활을 위한 모든 것. <br />
             가치로운 생활을 추구하는 당신과 늘 함께 합니다.
           </p>
-        </figcaption>
-      </figure>
-    </section>
+        </TextBox>
+      </FlexBox>
+    </SectionBanner>
   );
 }
 

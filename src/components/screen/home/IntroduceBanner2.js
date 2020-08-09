@@ -27,7 +27,7 @@ function IntroduceBanner2() {
       max-height: 524px;
     }
   `;
-  const TextBox = styled.div`
+  const ContentBox = styled.div`
     img {
       width: 481px;
       max-height: 134px;
@@ -37,6 +37,7 @@ function IntroduceBanner2() {
       line-height: 1.6;
       font-size: 20px;
       font-weight: 300;
+      letter-spacing: -2px;
     }
   `;
   return (
@@ -47,7 +48,7 @@ function IntroduceBanner2() {
           src="images/web-banner/200525_PC2.png"
           alt="책 읽을 시간이 없을땐 윌라"
         ></img>
-        <TextBox>
+        <ContentBox>
           <img
             src="images/web-banner/200525sesion2-title-pc.png"
             alt="책을 음악처럼 편안하게 무제한으로 듣다."
@@ -57,7 +58,7 @@ function IntroduceBanner2() {
             출퇴근 길에도, 휴식 중에도, 운동 중에도 <br />
             언제 어디서나 부담 없이 무제한으로 즐길 수 있습니다.
           </p>
-        </TextBox>
+        </ContentBox>
       </FlexBox>
     </SectionBanner>
   );

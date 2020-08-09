@@ -73,6 +73,8 @@ function Header() {
     border: solid 1px #dbdbdb;
     position: relative;
     background-color: #fafafa;
+    border-radius: 5px;
+    box-sizing: border-box;
 
     input {
       width: calc(100% - 46px);
@@ -81,6 +83,9 @@ function Header() {
       padding-left: 19px;
       color: #545454;
       background-color: transparent;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0;
     }
     button {
       padding: 12px 15px;
@@ -115,7 +120,6 @@ function Header() {
         line-height: 50px;
         margin-right: 30px;
         font-size: 19px;
-        font-weight: bold;
         :nth-of-type(4) {
           margin-right: 0;
           ::after {
@@ -128,6 +132,7 @@ function Header() {
           }
         }
         a {
+          font-weight: 700;
           color: #fff;
         }
         button {

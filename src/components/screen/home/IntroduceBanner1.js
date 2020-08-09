@@ -40,15 +40,12 @@ function IntroduceBanner1() {
       background-color: rgb(242, 242, 242);
       box-shadow: rgba(0, 0, 0, 0.3) 2px 4px 14px 0px;
       cursor: pointer;
-
+      font-weight: 200;
+      color: rgb(51, 51, 51);
       /* Button text */
       span {
-        color: rgb(51, 51, 51);
         :first-of-type {
           font-weight: 600;
-        }
-        :last-of-type {
-          font-weight: 400;
         }
       }
 
