@@ -5,7 +5,7 @@ import Footer from "./components/screen/commons/Footer";
 import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;400;500;700;900&display=swap');
   *{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
     background: none;
     color: black;
   }
+
 `;
 
 function App() {
