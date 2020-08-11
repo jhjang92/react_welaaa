@@ -40,6 +40,7 @@ function IntroduceAudioBook() {
           line-height: 1;
           display: inline-block;
           position: relative;
+          z-index: 0;
           ::after {
             content: "";
             width: 100%;
@@ -248,6 +249,9 @@ function IntroduceAudioBook() {
   // 리스트형태로 제공되는 콘텐츠
   // AudioList Article
   const ArticleAudioBookList = styled.article`
+    background: #f9f9f9;
+    padding: 15px 0 10px;
+    box-sizing: border-box;
     header {
       width: 1024px;
       margin: 0 auto;
@@ -272,6 +276,7 @@ function IntroduceAudioBook() {
           color: #030303;
           font-weight: 300;
           position: relative;
+          z-index: 0;
           ::after {
             content: "";
             width: 100%;
