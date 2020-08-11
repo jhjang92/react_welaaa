@@ -158,6 +158,90 @@ function IntroduceClassWelaaa() {
     }
   `;
 
+  // ClassList Article
+  const ArticleClassList = styled.article`
+    header {
+      width: 1024px;
+      margin: 0 auto;
+      text-align: center;
+      h3 {
+        margin: 0;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: -2px;
+        :first-of-type {
+          color: #030303;
+        }
+        :last-of-type {
+          margin-top: 5px;
+          font-weight: 200;
+          letter-spacing: -1.25px;
+          color: #666;
+        }
+
+        span {
+          display: inline-block;
+          color: #030303;
+          font-weight: 300;
+          position: relative;
+          ::after {
+            content: "";
+            width: 100%;
+            height: 17px;
+            background: #00c73c;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  `;
+  const FlexUlBox = styled.ul`
+    width: 1024px;
+    margin: 40px auto 168px;
+    display: flex;
+    justify-content: center;
+    li {
+      width: 162px;
+      margin-right: 25px;
+      vertical-align: top;
+      box-sizing: border-box;
+
+      figure {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        position: relative;
+        a {
+          position: absolute;
+          top: 137px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          box-sizing: border-box;
+          font-size: 0;
+          img {
+            font-size: 14px;
+          }
+        }
+        figcaption {
+          letter-spacing: -2px;
+          font-size: 18px;
+          text-align: left;
+          word-break: keep-all;
+          font-weight: 200;
+          P {
+            font-size: 15px;
+            color: #666;
+            line-height: 1;
+            margin: 0;
+          }
+        }
+      }
+    }
+  `;
   return (
     <SectionClassWelaaa className="section_content_welaaaclass">
       <h2>윌라 클래스</h2>
@@ -230,12 +314,14 @@ function IntroduceClassWelaaa() {
           </button>
         </SlideContentBox>
       </ArticleClassSlide>
-      <article className="section_list">
+      <ArticleClassList className="section_list">
         <header className="section_list-title">
-          <h3>온라인에서는 볼 수 없었던 강의들</h3>
+          <h3>
+            온라인에서는 <span>볼 수 없었던 강의들</span>
+          </h3>
           <h3>윌라에서 최초 공개합니다!</h3>
         </header>
-        <ul className="section_list-content">
+        <FlexUlBox className="section_list-content">
           <li>
             <figure>
               <img src="images/introduce/5_1.png" alt="유튜브 안내서"></img>
@@ -284,8 +370,8 @@ function IntroduceClassWelaaa() {
               </figcaption>
             </figure>
           </li>
-        </ul>
-      </article>
+        </FlexUlBox>
+      </ArticleClassList>
     </SectionClassWelaaa>
   );
 }
