@@ -83,8 +83,8 @@ function IntroduceInfoAudioBook2() {
           <Figure>
             <img src="images/introduce/10_1.png"></img>
             <figcaption>
-              <strong>더 편하게 보세요!</strong>
-              <p>교육계 최초로 세로 영상을 도입했습니다.</p>
+              <strong>그때 그때 선택하세요!</strong>
+              <p>비디오/오디오/텍스트 모드 중 취향대로 선택 가능합니다.</p>
             </figcaption>
           </Figure>
         </li>
@@ -92,8 +92,8 @@ function IntroduceInfoAudioBook2() {
           <Figure>
             <img src="images/introduce/10_1.png"></img>
             <figcaption>
-              <strong>더 편하게 보세요!</strong>
-              <p>교육계 최초로 세로 영상을 도입했습니다.</p>
+              <strong>잠시 꺼두셔도 됩니다!</strong>
+              <p>이어듣기 기능과 백그라운드 재생을 지원합니다.</p>
             </figcaption>
           </Figure>
         </li>
@@ -101,8 +101,8 @@ function IntroduceInfoAudioBook2() {
           <Figure>
             <img src="images/introduce/10_1.png"></img>
             <figcaption>
-              <strong>더 편하게 보세요!</strong>
-              <p>교육계 최초로 세로 영상을 도입했습니다.</p>
+              <strong>엄선된 콘텐츠 추천 받으세요!</strong>
+              <p>리뷰와 순위 기반으로 큐레이션 해드립니다.</p>
             </figcaption>
           </Figure>
         </li>
@@ -110,8 +110,8 @@ function IntroduceInfoAudioBook2() {
           <Figure>
             <img src="images/introduce/10_1.png"></img>
             <figcaption>
-              <strong>더 편하게 보세요!</strong>
-              <p>교육계 최초로 세로 영상을 도입했습니다.</p>
+              <strong>믿을만한 콘텐츠만 보세요!</strong>
+              <p>프리미엄 강의와 완독형 오디오북모두 즐길 수 있습니다.</p>
             </figcaption>
           </Figure>
         </li>
@@ -119,8 +119,8 @@ function IntroduceInfoAudioBook2() {
           <Figure>
             <img src="images/introduce/10_1.png"></img>
             <figcaption>
-              <strong>더 편하게 보세요!</strong>
-              <p>교육계 최초로 세로 영상을 도입했습니다.</p>
+              <strong>이제 직접 찾아가지 마세요!</strong>
+              <p>전국의 명강과 컨퍼런스를 윌라에서 볼 수 있습니다.</p>
             </figcaption>
           </Figure>
         </li>
