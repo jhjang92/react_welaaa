@@ -5,7 +5,10 @@ function IntroduceAdBanner() {
   const AdBannerBox = styled.div`
     cursor: pointer;
     a {
+      display: block;
+      font-size: 0;
       img {
+        font-size: 14px;
         width: 100%;
       }
     }
