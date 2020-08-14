@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react_welaaa/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/react_welaaa/static/js/main.1d5cbfc0.chunk.js",
-    "main.js.map": "/react_welaaa/static/js/main.1d5cbfc0.chunk.js.map",
+    "main.js": "/react_welaaa/static/js/main.02d556d2.chunk.js",
+    "main.js.map": "/react_welaaa/static/js/main.02d556d2.chunk.js.map",
     "runtime-main.js": "/react_welaaa/static/js/runtime-main.9f2dac44.js",
     "runtime-main.js.map": "/react_welaaa/static/js/runtime-main.9f2dac44.js.map",
     "static/js/2.eedea9a7.chunk.js": "/react_welaaa/static/js/2.eedea9a7.chunk.js",
     "static/js/2.eedea9a7.chunk.js.map": "/react_welaaa/static/js/2.eedea9a7.chunk.js.map",
     "index.html": "/react_welaaa/index.html",
-    "precache-manifest.45a7f361031ef4aca604c2dcb70f5def.js": "/react_welaaa/precache-manifest.45a7f361031ef4aca604c2dcb70f5def.js",
+    "precache-manifest.556b0fb790ba5381c109e103f2d05e9d.js": "/react_welaaa/precache-manifest.556b0fb790ba5381c109e103f2d05e9d.js",
     "service-worker.js": "/react_welaaa/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/react_welaaa/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.eedea9a7.chunk.js.LICENSE.txt": "/react_welaaa/static/js/2.eedea9a7.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9f2dac44.js",
     "static/js/2.eedea9a7.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.1d5cbfc0.chunk.js"
+    "static/js/main.02d556d2.chunk.js"
   ]
 }
