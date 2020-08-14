@@ -215,6 +215,10 @@ function IntroduceClassWelaaa() {
         padding: 0;
 
         position: relative;
+        > img {
+          border-radius: 9px;
+          box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.3);
+        }
         a {
           position: absolute;
           top: 137px;
@@ -232,6 +236,10 @@ function IntroduceClassWelaaa() {
           text-align: left;
           word-break: keep-all;
           font-weight: 200;
+          span {
+            height: 3em;
+            display: block;
+          }
           P {
             font-size: 15px;
             color: #666;
@@ -268,32 +276,80 @@ function IntroduceClassWelaaa() {
                 <li className="active">
                   <a href="#">
                     <img
-                      src="images/slide/classSlide/series_064_app.jpg"
-                      alt="미래학자의 퓨처리포트"
+                      src="images/slide/classSlide/series_027.jpg"
+                      alt="출근하기 싫다면 지금 당장 마음챙김"
                     ></img>
                   </a>
                 </li>
                 <li>
                   <a href="#">
                     <img
-                      src="images/slide/classSlide/series_064_app.jpg"
-                      alt="미래학자의 퓨처리포트"
+                      src="images/slide/classSlide/series_033_app.jpg"
+                      alt="베스트셀러 저자 직강"
                     ></img>
                   </a>
                 </li>
                 <li>
                   <a href="#">
                     <img
-                      src="images/slide/classSlide/series_064_app.jpg"
-                      alt="미래학자의 퓨처리포트"
+                      src="images/slide/classSlide/series_039_app.jpg"
+                      alt="윌라 인생문답"
                     ></img>
                   </a>
                 </li>
                 <li>
                   <a href="#">
                     <img
-                      src="images/slide/classSlide/series_064_app.jpg"
-                      alt="미래학자의 퓨처리포트"
+                      src="images/slide/classSlide/series_063_app.jpg"
+                      alt="한큐에 끝내는 2020 트렌드"
+                    ></img>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/slide/classSlide/series_065_app.jpg"
+                      alt="슬기로운 직장생활 - 생존 스킬"
+                    ></img>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/slide/classSlide/series_069.jpg"
+                      alt="나는 인정받는 팀장이고 싶다"
+                    ></img>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/slide/classSlide/series_070.jpg"
+                      alt="고전을 면치 못할 땐 고전을 펼치자!"
+                    ></img>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/slide/classSlide/series_105.jpg"
+                      alt="고객 마음을 움직이는 CS 전략"
+                    ></img>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/slide/classSlide/series_106.jpg"
+                      alt="윌라 X YBM"
+                    ></img>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/slide/classSlide/series_202_app.jpg"
+                      alt="윌라 취미 클래스"
                     ></img>
                   </a>
                 </li>
@@ -329,44 +385,44 @@ function IntroduceClassWelaaa() {
                 <img src="images/introduce/ic_play.png" alt="보러가기"></img>
               </a>
               <figcaption>
-                1인 크리에이터를 위한 유튜브 안내서
+                <span>1인 크리에이터를 위한 유튜브 안내서</span>
                 <p>이필성</p>
               </figcaption>
             </figure>
           </li>
           <li>
             <figure>
-              <img src="images/introduce/5_.png" alt="유튜브 안내서"></img>
+              <img src="images/introduce/5_2.png" alt=""></img>
               <a href="#">
                 <img src="images/introduce/ic_play.png" alt="보러가기"></img>
               </a>
               <figcaption>
-                1인 크리에이터를 위한 유튜브 안내서
-                <p>이필성</p>
+                <span>시가 필요한 순간</span>
+                <p>정재찬</p>
               </figcaption>
             </figure>
           </li>
           <li>
             <figure>
-              <img src="images/introduce/5_.png" alt="유튜브 안내서"></img>
+              <img src="images/introduce/5_3.png" alt=""></img>
               <a href="#">
                 <img src="images/introduce/ic_play.png" alt="보러가기"></img>
               </a>
               <figcaption>
-                1인 크리에이터를 위한 유튜브 안내서
-                <p>이필성</p>
+                <span>위클리 스타트업 스터디 20</span>
+                <p>임정욱</p>
               </figcaption>
             </figure>
           </li>
           <li>
             <figure>
-              <img src="images/introduce/5_.png" alt="유튜브 안내서"></img>
+              <img src="images/introduce/5_4.png" alt=""></img>
               <a href="#">
                 <img src="images/introduce/ic_play.png" alt="보러가기"></img>
               </a>
               <figcaption>
-                1인 크리에이터를 위한 유튜브 안내서
-                <p>이필성</p>
+                <span>잡생각을 아이디어로 바꾸는 아이디어 메이커</span>
+                <p>인기 PD와 작가 4인</p>
               </figcaption>
             </figure>
           </li>

@@ -114,7 +114,7 @@ function IntroduceAudioBook() {
       overflow: hidden;
 
       transform-style: preserve-3d;
-      background: blue;
+      background: rgb(191, 207, 132);
 
       :after {
         content: "";
@@ -126,21 +126,17 @@ function IntroduceAudioBook() {
         top: 0;
         pointer-events: none;
       }
-      a {
-        display: block;
-        font-size: 0;
-        > p {
-          font-size: 18px;
-          height: 27px;
-          margin: 21px 0;
-          line-height: 30px;
-          text-align: center;
-          color: white;
-        }
-        img {
-          font-size: 14px;
-          width: 100%;
-        }
+      > p {
+        font-size: 18px;
+        height: 27px;
+        margin: 21px 0;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+      }
+      img {
+        font-size: 14px;
+        width: 100%;
       }
       &.active {
         box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
@@ -155,16 +151,24 @@ function IntroduceAudioBook() {
         z-index: 0;
       }
       :nth-of-type(2) {
+        background: rgb(253, 168, 178);
         transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg);
         z-index: 1;
       }
       :nth-of-type(3) {
+        background: rgb(128, 120, 181);
         transform: translate3d(50px, 0px, -355px) rotateX(0deg) rotateY(0deg);
         z-index: 0;
       }
       :nth-of-type(4) {
+        background: rgb(131, 185, 248);
         transform: translate3d(100px, 0px, -710px) rotateX(0deg) rotateY(0deg);
         z-index: -1;
+      }
+      :nth-of-type(5) {
+        background: rgb(128, 120, 181);
+        transform: translate3d(100px, 0px, -1065px) rotateX(0deg) rotateY(0deg);
+        z-index: -2;
       }
     }
   `;
@@ -172,6 +176,10 @@ function IntroduceAudioBook() {
   const MonthBookFlexBox = styled.div`
     display: flex;
     justify-content: center;
+    a {
+      display: block;
+      font-size: 0;
+    }
     figure {
       width: 117px;
       margin: 0;
@@ -325,6 +333,10 @@ function IntroduceAudioBook() {
           text-align: left;
           word-break: keep-all;
           font-weight: 200;
+          span {
+            display: block;
+            height: 3em;
+          }
           P {
             font-size: 15px;
             color: #666;
@@ -353,109 +365,114 @@ function IntroduceAudioBook() {
             <SlidePerspective className="slide-perspective">
               <SlideListBox>
                 <li>
-                  <a href="#">
-                    <p>7월 이달의책</p>
-                    <MonthBookFlexBox className="MonthBook">
+                  <p>6월 이달의책</p>
+                  <MonthBookFlexBox className="MonthBook">
+                    <a href="#">
                       <figure>
                         <img
-                          src="images/8997-2-1594305861593.jpg"
-                          alt="존리의 부자되기 습관"
+                          src="images/slide/audioBook/banner/7688-2-1591577378332.jpg"
+                          alt=""
                         ></img>
                         <figcaption>
-                          <p>존리의 부자되기 습관</p>
+                          <p>성공하는 사람들의 7가지 습관</p>
                           <div>
                             <img
-                              src="images/7712-2-1591605517376.jpg"
-                              alt="존리"
+                              src="images/slide/audioBook/people/default.png"
+                              alt="스티븐 코비 (Stephen Richards Covey)"
                             ></img>
                             <div>
                               <p>저자</p>
-                              <p>존리</p>
+                              <p>스티븐 코비 (Stephen Richards Covey)</p>
                             </div>
                           </div>
                         </figcaption>
                       </figure>
+                    </a>
+
+                    <a href="#">
                       <figure>
                         <img
-                          src="images/8996-2-1594288152426.jpg"
-                          alt="루스벨트 게임"
+                          src="images/slide/audioBook/banner/6258-2-1591023829818.jpg"
+                          alt=""
                         ></img>
                         <figcaption>
-                          <p>존리의 부자되기 습관</p>
+                          <p>파워풀</p>
                           <div>
                             <img
-                              src="images/7887-2-1591605696219.jpg"
-                              alt="이케이도 준"
+                              src="images/slide/audioBook/people/8076-2-1591605876950.jpg"
+                              alt="패티 맥코드"
                             ></img>
                             <div>
                               <p>저자</p>
-                              <p>이케이도 준</p>
+                              <p>패티 맥코드</p>
                             </div>
                           </div>
                         </figcaption>
                       </figure>
-                    </MonthBookFlexBox>
-                  </a>
+                    </a>
+                  </MonthBookFlexBox>
                 </li>
                 <li className="active">
-                  <a href="#">
-                    <p>7월 이달의책</p>
-                    <MonthBookFlexBox className="MonthBook">
+                  <p>6월 이달의책</p>
+                  <MonthBookFlexBox className="MonthBook">
+                    <a href="#">
                       <figure>
                         <img
-                          src="images/8997-2-1594305861593.jpg"
-                          alt="존리의 부자되기 습관"
+                          src="images/slide/audioBook/banner/8996-2-1594288152426.jpg"
+                          alt=""
                         ></img>
                         <figcaption>
-                          <p>존리의 부자되기 습관</p>
+                          <p>프로이트의 의자</p>
                           <div>
                             <img
-                              src="images/7712-2-1591605517376.jpg"
-                              alt="존리"
+                              src="images/slide/audioBook/people/default.png"
+                              alt="정도연"
                             ></img>
                             <div>
                               <p>저자</p>
-                              <p>존리</p>
+                              <p>정도연</p>
                             </div>
                           </div>
                         </figcaption>
                       </figure>
+                    </a>
+                    <a href="#">
                       <figure>
                         <img
-                          src="images/8996-2-1594288152426.jpg"
-                          alt="루스벨트 게임"
+                          src="images/slide/audioBook/banner/7667-2-1591324322907.jpg"
+                          alt=""
                         ></img>
                         <figcaption>
-                          <p>존리의 부자되기 습관</p>
+                          <p>왜 아이에게 그런 말을 했을까</p>
                           <div>
                             <img
-                              src="images/7887-2-1591605696219.jpg"
-                              alt="이케이도 준"
+                              src="images/slide/audioBook/people/default.png"
+                              alt="정재영"
                             ></img>
                             <div>
                               <p>저자</p>
-                              <p>이케이도 준</p>
+                              <p>정재영</p>
                             </div>
                           </div>
                         </figcaption>
                       </figure>
-                    </MonthBookFlexBox>
-                  </a>
+                    </a>
+                  </MonthBookFlexBox>
                 </li>
                 <li>
-                  <a href="#">
-                    <p>7월 이달의책</p>
-                    <MonthBookFlexBox className="MonthBook">
+                  <p>7월 이달의책</p>
+                  <MonthBookFlexBox className="MonthBook">
+                    <a href="#">
                       <figure>
                         <img
-                          src="images/8997-2-1594305861593.jpg"
+                          src="images/slide/audioBook/banner/8997-2-1594305861593.jpg"
                           alt="존리의 부자되기 습관"
                         ></img>
                         <figcaption>
                           <p>존리의 부자되기 습관</p>
                           <div>
                             <img
-                              src="images/7712-2-1591605517376.jpg"
+                              src="images/slide/audioBook/people/7712-2-1591605517376.jpg"
                               alt="존리"
                             ></img>
                             <div>
@@ -465,16 +482,19 @@ function IntroduceAudioBook() {
                           </div>
                         </figcaption>
                       </figure>
+                    </a>
+
+                    <a href="#">
                       <figure>
                         <img
-                          src="images/8996-2-1594288152426.jpg"
+                          src="images/slide/audioBook/banner/8996-2-1594288152426.jpg"
                           alt="루스벨트 게임"
                         ></img>
                         <figcaption>
                           <p>존리의 부자되기 습관</p>
                           <div>
                             <img
-                              src="images/7887-2-1591605696219.jpg"
+                              src="images/slide/audioBook/people/7887-2-1591605696219.jpg"
                               alt="이케이도 준"
                             ></img>
                             <div>
@@ -484,98 +504,104 @@ function IntroduceAudioBook() {
                           </div>
                         </figcaption>
                       </figure>
-                    </MonthBookFlexBox>
-                  </a>
+                    </a>
+                  </MonthBookFlexBox>
                 </li>
                 <li>
-                  <a href="#">
-                    <p>7월 이달의책</p>
-                    <MonthBookFlexBox className="MonthBook">
+                  <p>8월 이달의책</p>
+                  <MonthBookFlexBox className="MonthBook">
+                    <a href="#">
                       <figure>
                         <img
-                          src="images/8997-2-1594305861593.jpg"
-                          alt="존리의 부자되기 습관"
+                          src="images/slide/audioBook/banner/9091-2-1594906628949.jpg"
+                          alt=""
                         ></img>
                         <figcaption>
-                          <p>존리의 부자되기 습관</p>
+                          <p>부의 확장</p>
                           <div>
                             <img
-                              src="images/7712-2-1591605517376.jpg"
-                              alt="존리"
+                              src="images/slide/audioBook/people/default.png"
+                              alt="천영록, 제갈현열"
                             ></img>
                             <div>
                               <p>저자</p>
-                              <p>존리</p>
+                              <p>천영록, 제갈현열</p>
                             </div>
                           </div>
                         </figcaption>
                       </figure>
+                    </a>
+
+                    <a href="#">
                       <figure>
                         <img
-                          src="images/8996-2-1594288152426.jpg"
-                          alt="루스벨트 게임"
+                          src="images/slide/audioBook/banner/9174-2-1595505350766.jpg"
+                          alt=""
                         ></img>
                         <figcaption>
-                          <p>존리의 부자되기 습관</p>
+                          <p>설이</p>
                           <div>
                             <img
-                              src="images/7887-2-1591605696219.jpg"
-                              alt="이케이도 준"
+                              src="images/slide/audioBook/people/9186-2-1595550432259.jpg"
+                              alt="심윤경"
                             ></img>
                             <div>
                               <p>저자</p>
-                              <p>이케이도 준</p>
+                              <p>심윤경</p>
                             </div>
                           </div>
                         </figcaption>
                       </figure>
-                    </MonthBookFlexBox>
-                  </a>
+                    </a>
+                  </MonthBookFlexBox>
                 </li>
                 <li>
-                  <a href="#">
-                    <p>7월 이달의책</p>
-                    <MonthBookFlexBox className="MonthBook">
+                  <p>8월 이달의책</p>
+                  <MonthBookFlexBox className="MonthBook">
+                    <a href="#">
                       <figure>
                         <img
-                          src="images/8997-2-1594305861593.jpg"
-                          alt="존리의 부자되기 습관"
+                          src="images/slide/audioBook/banner/9393-2-1596516338731.jpg"
+                          alt=""
                         ></img>
                         <figcaption>
-                          <p>존리의 부자되기 습관</p>
+                          <p>죽음2</p>
                           <div>
                             <img
-                              src="images/7712-2-1591605517376.jpg"
-                              alt="존리"
+                              src="images/slide/audioBook/people/9206-2-1595576121703.jpg"
+                              alt="베르나르 베르베르 (Bernard Werber)"
                             ></img>
                             <div>
                               <p>저자</p>
-                              <p>존리</p>
+                              <p>베르나르 베르베르 (Bernard Werber)</p>
                             </div>
                           </div>
                         </figcaption>
                       </figure>
+                    </a>
+
+                    <a href="#">
                       <figure>
                         <img
-                          src="images/8996-2-1594288152426.jpg"
-                          alt="루스벨트 게임"
+                          src="images/slide/audioBook/banner/9100-2-1594971868014.jpg"
+                          alt=""
                         ></img>
                         <figcaption>
-                          <p>존리의 부자되기 습관</p>
+                          <p>뉴타입의 시대</p>
                           <div>
                             <img
-                              src="images/7887-2-1591605696219.jpg"
-                              alt="이케이도 준"
+                              src="images/slide/audioBook/people/9099-2-1594971851201.jpg"
+                              alt="야마구치 슈"
                             ></img>
                             <div>
                               <p>저자</p>
-                              <p>이케이도 준</p>
+                              <p>야마구치 슈</p>
                             </div>
                           </div>
                         </figcaption>
                       </figure>
-                    </MonthBookFlexBox>
-                  </a>
+                    </a>
+                  </MonthBookFlexBox>
                 </li>
               </SlideListBox>
             </SlidePerspective>
@@ -594,6 +620,8 @@ function IntroduceAudioBook() {
           </button>
         </SlideContentBox>
       </ArticleAudioBookSlide>
+
+      {/* auidoBook List */}
       <ArticleAudioBookList className="section_list">
         <header className="section_list-title">
           <h3>
@@ -612,43 +640,44 @@ function IntroduceAudioBook() {
                 <img src="images/introduce/ic_play.png" alt="보러가기"></img>
               </a>
               <figcaption>
-                명견만리_불평등, 병리, 금융, 지역 편<p>KBS 명견만리 제작팀</p>
+                <span>명견만리_불평등, 병리, 금융, 지역 편</span>
+                <p>KBS 명견만리 제작팀</p>
               </figcaption>
             </figure>
           </li>
           <li>
             <figure>
-              <img src="images/introduce/5_.png" alt="유튜브 안내서"></img>
+              <img src="images/introduce/7_2.png" alt=""></img>
               <a href="#">
                 <img src="images/introduce/ic_play.png" alt="보러가기"></img>
               </a>
               <figcaption>
-                1인 크리에이터를 위한 유튜브 안내서
-                <p>이필성</p>
+                <span>북유럽 신화</span>
+                <p>닐 게이먼</p>
               </figcaption>
             </figure>
           </li>
           <li>
             <figure>
-              <img src="images/introduce/5_.png" alt="유튜브 안내서"></img>
+              <img src="images/introduce/7_3.png" alt=""></img>
               <a href="#">
                 <img src="images/introduce/ic_play.png" alt="보러가기"></img>
               </a>
               <figcaption>
-                1인 크리에이터를 위한 유튜브 안내서
-                <p>이필성</p>
+                <span>최고의 선택</span>
+                <p>김형철</p>
               </figcaption>
             </figure>
           </li>
           <li>
             <figure>
-              <img src="images/introduce/5_.png" alt="유튜브 안내서"></img>
+              <img src="images/introduce/7_4.png" alt=""></img>
               <a href="#">
                 <img src="images/introduce/ic_play.png" alt="보러가기"></img>
               </a>
               <figcaption>
-                1인 크리에이터를 위한 유튜브 안내서
-                <p>이필성</p>
+                <span>너의 췌장을 먹고 싶어</span>
+                <p>스미노 요루</p>
               </figcaption>
             </figure>
           </li>
