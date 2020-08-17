@@ -40,78 +40,177 @@ function IntroduceInfoAudioBook1() {
         }
       }
     }
+    @media (max-width: 1023px) {
+      padding-top: 40px;
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      background-image: url(images/introduce/9_line.png);
+      background-repeat: no-repeat;
+      background-position: left 246px;
+      background-size: 100% 1px;
+      h3 {
+        font-size: 36px;
+        width: 100%;
+        margin: 0;
+      }
+    }
   `;
   const Ul = styled.ul`
     padding: 0;
     min-height: 1000px;
-    &.web {
-      width: 1024px;
-      margin: 77px auto 0;
-      position: relative;
-      li {
-        background: url(images/introduce/9_1.png) no-repeat center top;
-        width: 320px;
-        padding-top: 106px;
+    width: 1024px;
+    margin: 77px auto 0;
+    position: relative;
+    li {
+      background-image: url(images/introduce/9_1.png);
+      background-repeat: no-repeat;
+      background-position: center top;
+      width: 320px;
+      padding-top: 106px;
 
-        position: absolute;
-        top: 0;
-        left: -37px;
-        ::before {
-          content: "";
-          display: block;
-          width: 26px;
-          height: 26px;
+      position: absolute;
+      top: 0;
+      left: -37px;
+      ::before {
+        content: "";
+        display: block;
+        width: 26px;
+        height: 26px;
+        margin: 10px auto 0;
+        background: #fff;
+        border: 2px solid #00c73c;
+        border-radius: 50%;
+      }
+      p {
+        margin: 0;
+        color: #666;
+        font-size: 40px;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: 1;
+        word-break: keep-all;
+
+        :nth-of-type(2) {
+          color: #353a3c;
+          display: inline-block;
           margin: 10px auto 0;
+          padding: 16px 19px;
+          font-weight: 500;
+          font-size: 30px;
+          background: #eaeaea;
+          border-radius: 13px;
+          letter-spacing: -0.8px;
+        }
+        :last-of-type {
+          font-size: 20px;
+          margin-top: 20px;
+          color: #666666;
+          letter-spacing: -0.8px;
+        }
+      }
+
+      /* li 각각의 위치 및 img 정보 */
+      :nth-of-type(2) {
+        background-image: url(images/introduce/9_2.png);
+        left: 324px;
+      }
+      :nth-of-type(3) {
+        background-image: url(images/introduce/9_3.png);
+        left: 686px;
+      }
+      :nth-of-type(4) {
+        background-image: url(images/introduce/9_4.png);
+        top: 425px;
+        left: 757px;
+      }
+      :nth-of-type(5) {
+        background-image: url(images/introduce/9_5.png);
+        top: 425px;
+        left: 396px;
+      }
+      :nth-of-type(6) {
+        background-image: url(images/introduce/9_6.png);
+        top: 425px;
+        left: 37px;
+      }
+    }
+    @media (max-width: 1023px) {
+      width: 1400px;
+      min-height: auto;
+
+      display: flex;
+      padding-left: 50px;
+      margin: 40px auto 69px;
+
+      li {
+        position: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-position: center 74px;
+        width: 70px;
+        padding: 0;
+        background-size: 100%;
+        margin-right: 173px;
+
+        :last-of-type {
+          margin-right: 0;
+        }
+        ::before {
+          order: 2;
+          width: 15px;
+          height: 15px;
           background: #fff;
-          border: 2px solid #00c73c;
-          border-radius: 50%;
+          border: 1px solid #979797;
+          margin-top: 18px;
         }
         p {
-          margin: 0;
-          color: #666;
-          font-size: 40px;
-          font-weight: 300;
-          letter-spacing: 0;
-          line-height: 1;
-          word-break: keep-all;
+          :first-of-type {
+            order: 1;
+            font-size: 20px;
 
+            padding: 6px 14px;
+            background: #00c73c;
+            border-radius: 3px;
+            color: #fff;
+            position: relative;
+            ::after {
+              content: "";
+              display: block;
+              width: 0;
+              height: 0;
+
+              position: absolute;
+              left: 50%;
+              bottom: -10px;
+              transform: translateX(-50%);
+              background: transparent;
+              border-top: 5px solid #00c73c;
+              border-right: 5px solid transparent;
+              border-bottom: 5px solid transparent;
+              border-left: 5px solid transparent;
+            }
+          }
           :nth-of-type(2) {
-            color: #353a3c;
-            display: inline-block;
-            margin: 10px auto 0;
-            padding: 16px 19px;
-            font-weight: 500;
-            font-size: 30px;
-            background: #eaeaea;
-            border-radius: 13px;
-            letter-spacing: -0.8px;
+            order: 3;
+            font-size: 22px;
+            background: none;
+            width: 180px;
+            padding: 0;
+            margin-top: 90px;
+
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #00c73c;
           }
           :last-of-type {
-            font-size: 20px;
-            margin-top: 20px;
-            color: #666666;
-            letter-spacing: -0.8px;
+            order: 4;
+            font-size: 12px;
+            width: 180px;
+            margin-top: 10px;
           }
-        }
-
-        /* li 각각의 위치 및 img 정보 */
-        :nth-of-type(2) {
-          left: 324px;
-        }
-        :nth-of-type(3) {
-          left: 686px;
-        }
-        :nth-of-type(4) {
-          top: 425px;
-          left: 757px;
-        }
-        :nth-of-type(5) {
-          top: 425px;
-          left: 396px;
-        }
-        :nth-of-type(6) {
-          top: 425px;
-          left: 37px;
         }
       }
     }

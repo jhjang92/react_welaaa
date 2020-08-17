@@ -20,6 +20,13 @@ function IntroduceInfoAudioBook2() {
         font-weight: 500;
       }
     }
+    @media (max-width: 1023px) {
+      padding: 40px 0 70px;
+      h3 {
+        font-size: 36px;
+        width: 768px;
+      }
+    }
   `;
   const Ul = styled.ul`
     width: 1160px;
@@ -33,8 +40,21 @@ function IntroduceInfoAudioBook2() {
       box-sizing: border-box;
       display: inline-block;
       text-align: center;
+
       :nth-of-type(3n) {
         margin: 0;
+      }
+    }
+    @media (max-width: 1023px) {
+      width: 768px;
+      padding: 0 18px;
+      display: flex;
+      flex-direction: column;
+      li {
+        display: block;
+        margin: 0;
+        width: 100%;
+        text-align: left;
       }
     }
   `;
@@ -60,6 +80,38 @@ function IntroduceInfoAudioBook2() {
         line-height: 1.5;
         color: #666666;
         word-break: keep-all;
+      }
+    }
+    @media (max-width: 1023px) {
+      display: flex;
+      padding: 30px 0;
+      box-sizing: border-box;
+      img {
+        width: 110px;
+      }
+      figcaption {
+        margin-left: 20px;
+        width: 100%;
+        transform: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        strong {
+          font-size: 20px;
+        }
+        p {
+          font-size: 16px;
+        }
+
+        ::after {
+          content: "";
+          display: block;
+          position: relative;
+          height: 1px;
+          bottom: -58px;
+          background: #f5f5f5;
+        }
       }
     }
   `;

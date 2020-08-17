@@ -15,6 +15,12 @@ function IntroduceMembership() {
       font-weight: 500;
       color: rgb(3, 3, 3);
       line-height: 48px !important;
+      span {
+        font-size: 30px;
+        font-weight: 500;
+        color: rgb(3, 3, 3);
+        line-height: 48px !important;
+      }
       strong {
         display: block;
         font-size: 50px;
@@ -56,6 +62,49 @@ function IntroduceMembership() {
         color: rgb(102, 102, 102);
       }
     }
+
+    @media (max-width: 1023px) {
+      padding-bottom: 60px;
+      text-align: left;
+
+      h3 {
+        font-size: 16px;
+        letter-spacing: -0.42px;
+        line-height: 1.44 !important;
+        padding: 0px 18px;
+        span {
+          font-size: 16px;
+          letter-spacing: -0.42px;
+          line-height: 1.44 !important;
+          display: block;
+        }
+        strong {
+          font-size: 24px;
+          line-height: 1.33 !important;
+          margin: 5px 0 25px;
+        }
+      }
+      > p {
+        font-size: 14px;
+        letter-spacing: -0.39px;
+        line-height: 1.43 !important;
+        padding: 0px 18px;
+        color: rgb(0, 0, 0);
+        strong {
+          font-size: 14px;
+          span {
+            font-size: 14px;
+            ::after {
+              height: 6px;
+            }
+          }
+        }
+        span {
+          font-size: 14px;
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
   `;
   const UlFlex = styled.ul`
     display: flex;
@@ -79,6 +128,17 @@ function IntroduceMembership() {
         margin-right: 0 !important;
       }
     }
+    @media (max-width: 1023px) {
+      justify-content: flex-start;
+      flex-direction: column;
+      li {
+        width: 100%;
+        height: 135px;
+        box-shadow: none;
+        padding: 25px !important;
+        margin: 0 0 15px 0 !important;
+      }
+    }
   `;
   const DivTopText = styled.div`
     height: 214px;
@@ -92,6 +152,12 @@ function IntroduceMembership() {
       color: rgb(0, 0, 0);
       margin: 0 0 10px;
       font-weight: 300;
+      span {
+        display: block;
+        font-size: 20px;
+        font-weight: 300;
+        color: rgb(0, 0, 0);
+      }
     }
     .title {
       font-size: 30px;
@@ -123,6 +189,7 @@ function IntroduceMembership() {
         padding: 0px 5px;
         border-radius: 3px;
         text-align: center;
+        box-sizing: border-box;
       }
       ::after {
         content: "";
@@ -131,6 +198,38 @@ function IntroduceMembership() {
         width: 255px;
         height: 1px;
         border-top: 1px solid rgb(210, 210, 210);
+      }
+    }
+    @media (max-width: 1023px) {
+      height: 92px;
+      p {
+        margin-bottom: 2px;
+        font-size: 14px;
+        line-height: 1.64;
+        letter-spacing: -0.39px;
+        span {
+          display: inline;
+          font-size: 14px;
+          line-height: 1.64;
+          letter-spacing: -0.39px;
+        }
+      }
+      .title {
+        font-size: 24px;
+        letter-spacing: -0.66px;
+      }
+      .price {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.64;
+        letter-spacing: -0.39px;
+        bottom: 3px;
+        span {
+          top: 2px;
+        }
+        ::after {
+          display: none;
+        }
       }
     }
   `;
@@ -142,6 +241,10 @@ function IntroduceMembership() {
     line-height: 1.5;
     letter-spacing: -0.58px;
     color: rgb(0, 0, 0);
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
   `;
   const Button = styled.button`
     position: absolute;
@@ -172,11 +275,30 @@ function IntroduceMembership() {
       top: 50%;
       transform: translateY(-50%);
     }
+    @media (max-width: 1023px) {
+      left: unset;
+      bottom: unset;
+      right: 0;
+      top: 0;
+      width: 80px;
+      height: 100%;
+      font-size: 12px;
+      line-height: 1.33 !important;
+      padding: 38px 0px !important;
+      letter-spacing: -2px;
+      text-align: center;
+      ::after {
+        width: 34px;
+        height: 34px;
+        top: 110px;
+        right: 23px;
+      }
+    }
   `;
   return (
     <SectionMembership className="section_membership">
       <h3>
-        가격 부담 없이 윌라의 모든 오디오북과 클래스를 즐기세요!
+        <span>가격 부담 없이</span> 윌라의 모든 오디오북과 클래스를 즐기세요!
         <strong>윌라 무제한 멤버십</strong>
       </h3>
       <p>
@@ -189,7 +311,7 @@ function IntroduceMembership() {
         <li>
           <DivTopText className="top">
             <p>
-              분야별 베스트셀러부터 <br />
+              <span>분야별 베스트셀러부터 </span>
               독점 콘텐츠까지
             </p>
             <strong className="title">오디오북 무제한</strong>
@@ -209,7 +331,7 @@ function IntroduceMembership() {
         <li>
           <DivTopText className="top">
             <p>
-              보고 듣는 <br />
+              <span>보고 듣는 </span>
               프리미엄 강의 콘텐츠
             </p>
             <strong className="title">클래스 무제한</strong>
@@ -229,7 +351,7 @@ function IntroduceMembership() {
         <li>
           <DivTopText className="top">
             <p>
-              윌라의 모든 콘텐츠를 <br />
+              <span>윌라의 모든 콘텐츠를 </span>
               동시에 누리는
             </p>
             <strong className="title">오디오북+클래스 무제한</strong>

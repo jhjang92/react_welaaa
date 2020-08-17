@@ -62,6 +62,29 @@ function Footer() {
         }
       }
     }
+    @media (max-width: 1599px) and (min-width: 1024px) {
+      width: 1000px;
+    }
+    /* 모바일 반응형 */
+    @media (max-width: 1023px) {
+      width: calc(100% - 36px);
+      .footer_menu {
+        li {
+          a {
+            font-size: 12px !important;
+            ::after {
+              padding: 0 7px;
+              font-size: 11px;
+            }
+          }
+        }
+      }
+
+      .footer_sns {
+        bottom: 50px;
+        left: 18px;
+      }
+    }
   `;
   const FooterSaperator = styled.div`
     width: 100%;
@@ -89,6 +112,23 @@ function Footer() {
       color: #cccccc;
       font-weight: 500;
     }
+
+    @media (max-width: 1599px) and (min-width: 1024px) {
+      width: 1000px;
+    }
+    @media (max-width: 1023px) {
+      width: calc(100% - 36px);
+      padding: 20px 0px 0;
+      font-size: 10px;
+      letter-spacing: -0.39px;
+      a {
+        img {
+          width: 63px;
+          height: 32px;
+          margin-right: 10px;
+        }
+      }
+    }
   `;
   const P_Address = styled.p`
     width: 1400px;
@@ -102,6 +142,16 @@ function Footer() {
     box-sizing: border-box;
 
     padding-bottom: 40px;
+
+    @media (max-width: 1599px) and (min-width: 1024px) {
+      width: 1000px;
+    }
+    @media (max-width: 1023px) {
+      width: calc(100% - 36px);
+      padding: 20px 0 96px;
+      font-size: 11px;
+      line-height: 1.67;
+    }
     .footer_bar {
       color: #cccccc;
       padding: 0 12px;

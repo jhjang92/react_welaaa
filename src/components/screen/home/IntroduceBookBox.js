@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 function IntroduceBookBox() {
   const SectionBookBox = styled.section`
-    padding-top: 28px;
+    padding-top: 40px;
     box-sizing: border-box;
     text-align: center;
     header {

@@ -13,6 +13,9 @@ function IntroduceAudioBook() {
       height: 1px;
       overflow: hidden;
     }
+    @media (max-width: 1023px) {
+      padding-top: 40px;
+    }
   `;
   const ArticleAudioBookSlide = styled.article`
     width: 1024px;
@@ -51,6 +54,18 @@ function IntroduceAudioBook() {
             bottom: -7px;
             z-index: -1;
           }
+        }
+      }
+    }
+
+    @media (max-width: 1023px) {
+      width: 768px;
+      header {
+        h3 {
+          font-size: 36px;
+        }
+        p {
+          font-size: 22px;
         }
       }
     }
@@ -298,6 +313,16 @@ function IntroduceAudioBook() {
         }
       }
     }
+    @media (max-width: 1023px) {
+      header {
+        h3 {
+          font-size: 30px;
+          :last-of-type {
+            font-size: 22px;
+          }
+        }
+      }
+    }
   `;
   const FlexUlBox = styled.ul`
     width: 1024px;
@@ -356,9 +381,7 @@ function IntroduceAudioBook() {
           <h3>
             <span>윌라 오디오북</span>
           </h3>
-          <h4>
-            최신작부터 베스트셀러까지,성우가 녹음해서 더 깊어지는 독서 생활
-          </h4>
+          <p>최신작부터 베스트셀러까지,성우가 녹음해서 더 깊어지는 독서 생활</p>
         </header>
         <SlideContentBox className="section_slide-content">
           <SlidePositionBox className="slide-position">

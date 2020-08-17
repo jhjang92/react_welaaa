@@ -18,10 +18,26 @@ function IntroduceBanner3() {
       height: 1px;
       overflow: hidden;
     }
+    @media (max-width: 1023px) {
+      background: none;
+      padding-top: 0;
+      h2 {
+        position: absolute;
+      }
+    }
   `;
   const FlexBox = styled.div`
     display: flex;
     justify-content: center;
+    @media (max-width: 1023px) {
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      .people {
+        content: url("images/web-banner/200723_MO3.jpg");
+        width: 100%;
+      }
+    }
   `;
   const ContentBox = styled.div`
     width: 524px;
@@ -44,6 +60,27 @@ function IntroduceBanner3() {
       margin-top: 20px;
       letter-spacing: -2px;
     }
+    @media (max-width: 1023px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin: 11.111vw auto 0;
+      align-items: flex-start;
+      padding: 0 0 0 10vw;
+      img {
+        content: url("images/web-banner/200525sesion3-title-mo.png");
+
+        width: 59.444vw;
+        height: 15.833vw;
+      }
+      p {
+        text-align: left;
+        margin-top: 2.5vw;
+        font-size: 3vw;
+        line-height: 1.67 !important;
+      }
+    }
   `;
   return (
     <SectionBanner className="section_banner3-introduce">
@@ -63,6 +100,7 @@ function IntroduceBanner3() {
           </p>
         </ContentBox>
         <img
+          className="people"
           src="images/web-banner/200525_PC3.png"
           alt="책 한권도 안되는 가격에 무제한"
         ></img>

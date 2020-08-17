@@ -53,6 +53,14 @@ function IntroduceClassWelaaa() {
         }
       }
     }
+    @media (max-width: 1023px) {
+      header {
+        font-size: 22px;
+        h3 {
+          font-size: 36px;
+        }
+      }
+    }
   `;
   const SlideContentBox = styled.div`
     background: url("images/introduce/4_pc_bg.png") no-repeat top center / 370px;

@@ -14,6 +14,10 @@ function IntroduceBanner4() {
       height: 1px;
       overflow: hidden;
     }
+    @media (max-width: 1023px) {
+      background: url("images/web-banner/200723_MO4.jpg") center / cover;
+      height: 1290px;
+    }
   `;
   const FlexBox = styled.div`
     width: 1044px;
@@ -26,6 +30,15 @@ function IntroduceBanner4() {
       width: 638px;
       margin-bottom: 30px;
     }
+    @media (max-width: 1023px) {
+      padding: 0px 6.944vw;
+      img {
+        width: 77.222vw;
+        height: 38.611vw;
+        margin-bottom: 6.944vw;
+        content: url("images/web-banner/200723_MO4-2.png");
+      }
+    }
   `;
   const TextBox = styled.div`
     p {
@@ -33,6 +46,13 @@ function IntroduceBanner4() {
       margin: 0 0 15px;
       font-size: 16px;
       font-weight: 200;
+    }
+    @media (max-width: 1023px) {
+      p {
+        font-size: 2.6vw;
+        margin-bottom: 2.778vw;
+        line-height: 1.67 !important;
+      }
     }
   `;
   return (
