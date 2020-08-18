@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./components/screen/commons/Header";
+import HeaderMobile from "./components/screen/commons/HeaderMobile";
 import HomeMain from "./components/screen/home/HomeMain";
 import Footer from "./components/screen/commons/Footer";
 import styled, { createGlobalStyle } from "styled-components";
@@ -34,7 +35,9 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
+      {/* 추후 모바일 웹 분기하여 header 노출 */}
+      {/* <Header /> */}
+      <HeaderMobile />
       {/* 나중에 라우터로 main을 분기할예정. 홈일땐 HomeMain class일땐 ClassMain */}
       <HomeMain />
       <Footer />

@@ -45,6 +45,7 @@ function Header() {
     }
   `;
   const HeaderTopLogo = styled.h1`
+    font-size: 0;
     a {
       font-size: 34px;
       img {
@@ -100,6 +101,13 @@ function Header() {
     height: 50px;
     background: #00c73c;
     box-sizing: border-box;
+    position: relative;
+    &.fixed {
+      position: fixed;
+      z-index: 999;
+      width: 100%;
+      top: 0;
+    }
   `;
   const HeaderGnbMediaBox = styled.div`
     width: 1400px;
@@ -149,8 +157,10 @@ function Header() {
             background-image: url("images/icons/web-ic-gnb-angle-down.png");
             background-repeat: no-repeat;
             background-position: 0 0;
-            /* 클릭시 화살표 반전 */
-            active {
+          }
+          /* 클릭시 화살표 반전 클래스 추가 */
+          &.active {
+            ::after {
               background-position: 0 -7px;
             }
           }
@@ -174,6 +184,70 @@ function Header() {
       }
     }
   `;
+
+  // gnb 카테고리 hover 시 보일 전체 메뉴 Box - start
+  const HeaderGnbAllMenu = styled.div`
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: white;
+    padding: 30px 0 25px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+
+    display: none;
+    z-index: 999;
+    /* 전체메뉴 클릭 시 class 추가 */
+    &.active {
+      display: block;
+    }
+  `;
+  const AllMenuBox = styled.div`
+    display: flex;
+    width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    div {
+      padding-left: 40px;
+      border-left: 1px solid #ddd;
+      box-sizing: border-box;
+      span {
+        color: #00c73c;
+        font-size: 17px;
+        font-weight: 700;
+      }
+      .grid-box {
+        display: grid;
+        grid-template-columns: 224px 200px;
+        grid-template-rows: auto;
+        margin-top: 6px;
+        li {
+          a {
+            line-height: 28px;
+            color: #555;
+          }
+          :first-of-type {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            a {
+              color: #ff761b;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+      .grid-unset {
+        li {
+          a {
+            line-height: 28px;
+            color: #555;
+          }
+        }
+      }
+    }
+  `;
+  // gnb 카테고리 hover 시 보일 전체 메뉴 Box - end
   return (
     <Header>
       <HeaderTopBox className="header_top-box">
@@ -184,6 +258,7 @@ function Header() {
           <a>윌라계정만들기</a>
         </HeaderTopUserBox>
         <HeaderTopLogo className="top_logo">
+          윌라
           <a href="#">
             <img
               src="images/web-welaaa-logo-kr.png"
@@ -239,6 +314,151 @@ function Header() {
             <a href="#">윌라 멤버십 소개</a>
           </HeaderSnbBox>
         </HeaderGnbMediaBox>
+        <HeaderGnbAllMenu>
+          <AllMenuBox>
+            <div>
+              <span>클래스</span>
+              <ul className="grid-box">
+                <li>
+                  <a href="#">★뭘 좋아할지 몰라서, 테마별로 준비했어요!</a>
+                </li>
+
+                <li>
+                  <a href="#">전체</a>
+                </li>
+                <li>
+                  <a href="#">대한민국 명강</a>
+                </li>
+
+                <li>
+                  <a href="#">위클리</a>
+                </li>
+                <li>
+                  <a href="#">인생문답</a>
+                </li>
+                <li>
+                  <a href="#">자기계발</a>
+                </li>
+                <li>
+                  <a href="#">창의/기획/생각법</a>
+                </li>
+                <li>
+                  <a href="#">리더십</a>
+                </li>
+                <li>
+                  <a href="#">일잘러스킬</a>
+                </li>
+                <li>
+                  <a href="#">경제/트렌드</a>
+                </li>
+                <li>
+                  <a href="#">비즈니스</a>
+                </li>
+                <li>
+                  <a href="#">재테크</a>
+                </li>
+                <li>
+                  <a href="#">인문/지적대화</a>
+                </li>
+                <li>
+                  <a href="#">문화/예술</a>
+                </li>
+                <li>
+                  <a href="#">행복/가정</a>
+                </li>
+                <li>
+                  <a href="#">마케팅실무</a>
+                </li>
+                <li>
+                  <a href="#">테크&비즈니스</a>
+                </li>
+                <li>
+                  <a href="#">전문직무</a>
+                </li>
+                <li>
+                  <a href="#">취미생활</a>
+                </li>
+                <li>
+                  <a href="#">영어</a>
+                </li>
+                <li>
+                  <a href="#">일본어/중국어</a>
+                </li>
+                <li>
+                  <a href="#">기타외국어</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <span>오디오북</span>
+              <ul className="grid-box">
+                <li>
+                  <a href="#">★이달의 오디오북</a>
+                </li>
+                <li>
+                  <a href="#">전체</a>
+                </li>
+                <li>
+                  <a href="#">이달의 오디오북</a>
+                </li>
+
+                <li>
+                  <a href="#">인문</a>
+                </li>
+                <li>
+                  <a href="#">경제·경영</a>
+                </li>
+                <li>
+                  <a href="#">자기계발</a>
+                </li>
+                <li>
+                  <a href="#">시/에세이</a>
+                </li>
+                <li>
+                  <a href="#">가정·실용</a>
+                </li>
+                <li>
+                  <a href="#">예술</a>
+                </li>
+                <li>
+                  <a href="#">과학</a>
+                </li>
+                <li>
+                  <a href="#">클래식</a>
+                </li>
+                <li>
+                  <a href="#">주니어</a>
+                </li>
+                <li>
+                  <a href="#">소설</a>
+                </li>
+                <li>
+                  <a href="#">매거진</a>
+                </li>
+                <li>
+                  <a href="#">영어 오디오북</a>
+                </li>
+                <li>
+                  <a href="#">북리뷰</a>
+                </li>
+                <li>
+                  <a href="#">무료 오디오북</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <span>마이윌라</span>
+              <ul className="grid-unset">
+                <li>
+                  <a href="#">고객센터</a>
+                </li>
+                <li>
+                  <a href="#">로그인 해주세요</a>
+                </li>
+              </ul>
+            </div>
+          </AllMenuBox>
+        </HeaderGnbAllMenu>
       </HeaderGnbBox>
     </Header>
   );

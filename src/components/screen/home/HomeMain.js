@@ -16,6 +16,9 @@ import styled from "styled-components";
 function HomeMain() {
   const HomeMain = styled.main`
     overflow: hidden;
+    @media (max-width: 1023px) {
+      padding-top: 99px;
+    }
   `;
   const IntroduceBannerBox = styled.div``;
   const IntroduceClassWelaaaBox = styled.div``;

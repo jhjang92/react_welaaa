@@ -19,6 +19,13 @@ function IntroduceBanner1() {
       height: 1px;
       overflow: hidden;
     }
+    @media (max-width: 1023px) {
+      background: url("images/web-banner/200525_MO1.jpg") center / cover
+        no-repeat;
+      width: 100%;
+      height: initial;
+      padding-top: 83.33%;
+    }
   `;
   const SectionBtnBox = styled.div`
     min-width: 682px;
@@ -79,6 +86,9 @@ function IntroduceBanner1() {
           color: rgb(255, 255, 255);
         }
       }
+    }
+    @media (max-width: 1023px) {
+      z-index: 3;
     }
   `;
 
