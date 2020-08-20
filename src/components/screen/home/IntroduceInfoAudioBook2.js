@@ -32,7 +32,6 @@ function IntroduceInfoAudioBook2() {
     width: 1160px;
     margin: 76px auto 0;
     box-sizing: border-box;
-
     li {
       background: url(images/introudce/10_1.png) no-repeat center top;
       width: 208px;
@@ -40,6 +39,7 @@ function IntroduceInfoAudioBook2() {
       box-sizing: border-box;
       display: inline-block;
       text-align: center;
+      vertical-align: top;
 
       :nth-of-type(3n) {
         margin: 0;
