@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { WelaaaProvider } from "./components/welaaaContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <WelaaaProvider>
+      <App />
+    </WelaaaProvider>
   </React.StrictMode>,
   document.getElementById("wrapper")
 );

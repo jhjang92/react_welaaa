@@ -9,15 +9,19 @@ import React, {
 // 사이트의 각종 상태값들 정의
 // ex) 팝업창 true,false여부
 //  mobile,web 전환여부 등
+// device: true === mobile , false === web
 const initWelaaa = {
-  device: "web",
+  device: false,
   allMenu: false,
 };
 
 function mainReducer(state, action) {
   switch (action.type) {
     case "DEVICE":
-      return { ...state, device: action.device };
+      return {
+        ...state,
+        device: action.device,
+      };
     case "ALLMENU":
       return { ...state, allMenu: !state.allMenu };
     default:
@@ -29,7 +33,9 @@ const InitStateContext = createContext();
 const InitDispatchContext = createContext();
 
 export function WelaaaProvider({ children }) {
+  console.log("WelaaaProvider");
   const [state, dispatch] = useReducer(mainReducer, initWelaaa);
+
   return (
     <InitStateContext.Provider value={state}>
       <InitDispatchContext.Provider value={dispatch}>
