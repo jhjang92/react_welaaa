@@ -37,7 +37,7 @@ function App() {
       <GlobalStyle />
       {/* 추후 모바일 웹 분기하여 header 노출 */}
       {/* <Header /> */}
-      <HeaderMobile />
+      <Header />
       {/* 나중에 라우터로 main을 분기할예정. 홈일땐 HomeMain class일땐 ClassMain */}
       <HomeMain />
       <Footer />
