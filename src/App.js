@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./components/screen/commons/Header";
-import HeaderMobile from "./components/screen/commons/HeaderMobile";
-import HomeMain from "./components/screen/home/HomeMain";
-import Footer from "./components/screen/commons/Footer";
+import Header from "./components/commons/Header";
+import HeaderMobile from "./components/commons/HeaderMobile";
+import HomeMain from "./components/home/HomeMain";
+import Footer from "./components/commons/Footer";
 import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`

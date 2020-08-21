@@ -248,6 +248,7 @@ function Header() {
     }
   `;
   // gnb 카테고리 hover 시 보일 전체 메뉴 Box - end
+
   return (
     <Header>
       <HeaderTopBox className="header_top-box">
