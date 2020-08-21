@@ -6,18 +6,12 @@ function Footer() {
       <FooterTop className="footer_top">
         <ul className="footer_menu">
           <li>
-            <a
-              href="https://static.welaaa.co.kr/app-docs/terms.html"
-              target="_blank"
-            >
+            <a href="https://static.welaaa.co.kr/app-docs/terms.html">
               이용약관
             </a>
           </li>
           <li className="strong">
-            <a
-              href="https://static.welaaa.co.kr/app-docs/privacy_statement.html"
-              target="_blank"
-            >
+            <a href="https://static.welaaa.co.kr/app-docs/privacy_statement.html">
               개인정보 처리방침
             </a>
           </li>
@@ -25,12 +19,7 @@ function Footer() {
             <a href="https://www.welaaa.com/support/contents">강사 지원</a>
           </li>
           <li>
-            <a
-              href="https://sites.google.com/view/opencontents"
-              target="_blank"
-            >
-              제휴 안내
-            </a>
+            <a href="https://sites.google.com/view/opencontents">제휴 안내</a>
           </li>
           <li>
             <a href="https://www.welaaa.com/support/enterprise-promotion">
@@ -40,7 +29,7 @@ function Footer() {
         </ul>
         <ul className="footer_sns">
           <li>
-            <a href="https://blog.naver.com/influentials" target="_blank">
+            <a href="https://blog.naver.com/influentials">
               <img
                 src="images/icons/footer-ic-naver.png"
                 alt="네이버 블로그"
@@ -48,7 +37,7 @@ function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/welaaaofficial" target="_blank">
+            <a href="https://www.facebook.com/welaaaofficial">
               <img
                 src="images/icons/footer-ic-fb.png"
                 alt="페이스북 윌라"
@@ -56,10 +45,7 @@ function Footer() {
             </a>
           </li>
           <li>
-            <a
-              href="https://post.naver.com/my.nhn?memberNo=38709098"
-              target="_blank"
-            >
+            <a href="https://post.naver.com/my.nhn?memberNo=38709098">
               <img
                 src="images/icons/footer-ic-pencil.png"
                 alt="네이버 포스트"
@@ -67,10 +53,7 @@ function Footer() {
             </a>
           </li>
           <li>
-            <a
-              href="https://www.youtube.com/channel/UCmZiHU5N0BT3K8oiDGT9tLg"
-              target="_blank"
-            >
+            <a href="https://www.youtube.com/channel/UCmZiHU5N0BT3K8oiDGT9tLg">
               <img
                 src="images/icons/footer-ic-youtube.png"
                 alt="유튜브 윌라"

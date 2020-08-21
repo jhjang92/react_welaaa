@@ -16,9 +16,9 @@ function HeaderWeb() {
       <HeaderTopBox className="header_top-box">
         <HeaderTopUserBox className="top_user">
           <img src="images/icons/web-ic-person.png" alt="user 아이콘"></img>
-          <a>로그인</a>
+          <a href="#">로그인</a>
           <span></span>
-          <a>윌라계정만들기</a>
+          <a href="#">윌라계정만들기</a>
         </HeaderTopUserBox>
         <HeaderTopLogo className="top_logo">
           윌라
@@ -31,7 +31,7 @@ function HeaderWeb() {
           </a>
         </HeaderTopLogo>
         <HeaderTopSearch className="top_search">
-          <a>
+          <a href="#">
             <img src="images/icons/cart.svg" alt="장바구니"></img>
           </a>
           <HeaderTopSearchBox className="top_search_box">

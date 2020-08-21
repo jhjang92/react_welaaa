@@ -48,12 +48,7 @@ function App() {
 export default React.memo(App);
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-  *{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 400;
-    color: #555555;
-  }
+
   body{
     margin: 0;
     padding: 0;

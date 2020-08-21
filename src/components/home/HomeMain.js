@@ -14,43 +14,41 @@ import IntroduceAdBanner from "./IntroduceAdBanner";
 import styled from "styled-components";
 
 function HomeMain() {
-  const HomeMain = styled.main`
-    overflow: hidden;
-    @media (max-width: 1023px) {
-      padding-top: 99px;
-    }
-  `;
-  const IntroduceBannerBox = styled.div``;
-  const IntroduceClassWelaaaBox = styled.div``;
-  const IntroduceAudioBookBox = styled.div``;
   return (
-    <HomeMain>
+    <Main>
       {/* 섹션마다 백그라운드이미지 추가하기. 1200 / 640 cover */}
       {/* Banner Section */}
-      <IntroduceBannerBox className="IntroduceBanner">
+      <div className="IntroduceBanner">
         <IntroduceBanner1 />
         <IntroduceBanner2 />
         <IntroduceBanner3 />
         <IntroduceBanner4 />
-      </IntroduceBannerBox>
+      </div>
       {/* classBook Section */}
-      <IntroduceClassWelaaaBox className="IntroduceClassWelaaa">
+      <div className="IntroduceClassWelaaa">
         <IntroduceClassWelaaa />
-      </IntroduceClassWelaaaBox>
+      </div>
       {/* audioBook Section */}
-      <IntroduceAudioBookBox className="IntroduceAudioBook">
+      <div className="IntroduceAudioBook">
         <IntroduceAudioBook />
         <IntroduceBookBox />
 
         {/* info section */}
         <IntroduceInfoAudioBook1 />
         <IntroduceInfoAudioBook2 />
-      </IntroduceAudioBookBox>
+      </div>
       {/* Ad */}
       <IntroduceMembership />
       <IntroduceAdBanner />
-    </HomeMain>
+    </Main>
   );
 }
 
 export default HomeMain;
+
+const Main = styled.main`
+  overflow: hidden;
+  @media (max-width: 1023px) {
+    padding-top: 99px;
+  }
+`;
