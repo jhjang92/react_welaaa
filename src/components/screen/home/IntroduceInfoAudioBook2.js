@@ -15,6 +15,10 @@ function IntroduceInfoAudioBook2() {
       letter-spacing: -2px;
       color: #030303;
       font-weight: 200;
+      span {
+        color: #030303;
+        font-weight: 200;
+      }
       strong {
         color: #030303;
         font-weight: 500;
@@ -25,6 +29,41 @@ function IntroduceInfoAudioBook2() {
       h3 {
         font-size: 36px;
         width: 768px;
+      }
+    }
+    @media (max-width: 768px) {
+      padding: 40px 18px 70px;
+      h3 {
+        text-align: left;
+        margin-bottom: 8px;
+        font-size: 29px;
+        line-height: 1.3em;
+        letter-spacing: -1px;
+        .underline {
+          display: inline-block;
+          position: relative;
+          z-index: 1;
+
+          ::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 6px;
+            background: #00c73c;
+            bottom: 0;
+            z-index: -1;
+          }
+        }
+        .text-span {
+          display: block;
+        }
+        strong {
+          display: none;
+        }
+        br {
+          display: none;
+        }
       }
     }
   `;
@@ -56,6 +95,10 @@ function IntroduceInfoAudioBook2() {
         width: 100%;
         text-align: left;
       }
+    }
+    @media (max-width: 768px) {
+      margin-top: 10px;
+      padding: 0;
     }
   `;
   const Figure = styled.figure`
@@ -114,11 +157,20 @@ function IntroduceInfoAudioBook2() {
         }
       }
     }
+    @media (max-width: 768px) {
+      img {
+        width: 70px;
+      }
+    }
   `;
   return (
     <SectionAudioBook className="section_info2-audiobook">
       <h3>
-        이제 윌라로 더 스마트한 지식생활하세요! <br />
+        이제 윌라로 <span className="underline">더 스마트한</span>{" "}
+        <span className="text-span">
+          <span className="underline">지식생활</span>하세요!
+        </span>
+        <br />
         <strong>지식이 생활이 되는 윌라만의 특별한 기능</strong>
       </h3>
       <Ul>

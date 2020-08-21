@@ -34,6 +34,54 @@ function IntroduceBookBox() {
         }
       }
     }
+    @media (max-width: 768px) {
+      padding: 40px 0px;
+      header {
+        align-items: flex-start;
+        padding-left: 18px;
+        margin: 0;
+        h3 {
+          height: unset;
+          img {
+            height: 35px;
+          }
+        }
+        p {
+          :last-of-type {
+            display: none;
+          }
+
+          text-align: left;
+          strong {
+            margin-bottom: 12px;
+            font-size: 30px;
+            span {
+              font-weight: 500;
+              color: #030303;
+            }
+            .underline {
+              display: inline-block;
+              position: relative;
+              z-index: 1;
+
+              ::after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 6px;
+                background: #00c73c;
+                bottom: 5px;
+                z-index: -1;
+              }
+            }
+            .text-span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
   `;
   const FlexUlBox = styled.ul`
     display: flex;
@@ -77,6 +125,21 @@ function IntroduceBookBox() {
         }
       }
     }
+    @media (max-width: 768px) {
+      width: 600px;
+      margin: 70px auto 0;
+      li {
+        width: 180px;
+        margin-right: 30px;
+        :last-of-type {
+          margin-right: 0;
+        }
+        ::after {
+          width: 180px;
+          height: 180px;
+        }
+      }
+    }
   `;
   const Figure = styled.figure`
     margin: 0 auto;
@@ -117,6 +180,20 @@ function IntroduceBookBox() {
         }
       }
     }
+    @media (max-width: 768px) {
+      img {
+        width: 125px;
+        height: 189px;
+      }
+      figcaption {
+        p {
+          font-size: 14px;
+          :first-of-type {
+            font-size: 16px;
+          }
+        }
+      }
+    }
   `;
   const LinkFreeListen = styled.a`
     button {
@@ -132,6 +209,27 @@ function IntroduceBookBox() {
       letter-spacing: -2px;
       line-height: 1;
     }
+    @media (max-width: 768px) {
+      button {
+        width: calc(100% - 36px);
+        position: relative;
+        margin: 40px auto 25px;
+        padding: 15px 0;
+        background: #00c73c;
+        border-radius: 5px;
+        color: #fff;
+        ::after {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-left: 10px;
+          background: url(images/introduce/ic_link.png) no-repeat center / 20px
+            20px;
+          vertical-align: top;
+        }
+      }
+    }
   `;
   return (
     <SectionBookBox className="section_bookbox-audiobook">
@@ -140,7 +238,12 @@ function IntroduceBookBox() {
           <img src="images/introduce/bookbox_title.png" alt="북크박스"></img>
         </h3>
         <p>
-          <strong>진짜 바쁠 땐 고전부터 신간까지 요약한</strong>
+          <strong>
+            진짜 바쁠 땐
+            <span className="text-span">
+              <span className="underline">고전부터 신간</span>까지 요약한
+            </span>
+          </strong>
         </p>
         <p>지식인들의 10분 북인사이트</p>
       </header>

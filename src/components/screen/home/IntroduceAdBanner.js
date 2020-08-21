@@ -12,6 +12,13 @@ function IntroduceAdBanner() {
         width: 100%;
       }
     }
+    @media (max-width: 1023px) {
+      a {
+        img {
+          content: url(images/static/banner-web/오디오북카드지갑_375x125.jpg);
+        }
+      }
+    }
   `;
   return (
     <AdBannerBox className="banner-ad">

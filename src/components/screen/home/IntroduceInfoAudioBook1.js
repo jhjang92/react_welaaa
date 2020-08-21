@@ -55,6 +55,22 @@ function IntroduceInfoAudioBook1() {
         margin: 0;
       }
     }
+    @media (max-width: 768px) {
+      background-position: left 228px;
+      h3 {
+        text-align: left;
+        padding-left: 18px;
+        font-size: 29px;
+        line-height: 1.3em;
+        letter-spacing: -1px;
+        span {
+          ::after {
+            height: 6px;
+            bottom: -2px;
+          }
+        }
+      }
+    }
   `;
   const Ul = styled.ul`
     padding: 0;
@@ -212,6 +228,12 @@ function IntroduceInfoAudioBook1() {
             margin-top: 10px;
           }
         }
+      }
+    }
+    @media (max-width: 768px) {
+      margin: 55px auto 52px;
+      li {
+        margin-right: 110px;
       }
     }
   `;

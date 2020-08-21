@@ -62,7 +62,9 @@ function IntroduceBanner1() {
         width: 50px;
         height: 50px;
         position: absolute;
-        top: 20px;
+
+        top: 50%;
+        transform: translateY(-50%);
         right: 20px;
         display: inline-block;
         background: url("images/introduce/ic_more_small.png") center / cover;
@@ -89,6 +91,33 @@ function IntroduceBanner1() {
     }
     @media (max-width: 1023px) {
       z-index: 3;
+    }
+    @media (max-width: 768px) {
+      min-width: unset;
+      width: 90vw;
+      button {
+        width: 100%;
+        height: 17.778vw;
+        letter-spacing: -0.6px;
+        font-size: 4.167vw;
+
+        :first-of-type {
+          display: none;
+        }
+        br {
+          display: none;
+        }
+        span {
+          :last-of-type {
+            font-weight: 300;
+            margin-left: 5px;
+          }
+        }
+        ::after {
+          width: 8.333vw;
+          height: 8.333vw;
+        }
+      }
     }
   `;
 

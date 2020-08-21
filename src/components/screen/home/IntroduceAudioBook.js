@@ -14,7 +14,7 @@ function IntroduceAudioBook() {
       overflow: hidden;
     }
     @media (max-width: 1023px) {
-      padding-top: 40px;
+      padding-top: 90px;
     }
   `;
   const ArticleAudioBookSlide = styled.article`
@@ -69,6 +69,33 @@ function IntroduceAudioBook() {
         }
       }
     }
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 0px 18px 13px;
+      header {
+        text-align: left;
+        h3 {
+          font-size: 29px;
+          line-height: 1.3em;
+          letter-spacing: -1px;
+          :last-of-type {
+            margin-bottom: 8px;
+          }
+          span {
+            ::after {
+              height: 6px;
+              bottom: 1px;
+            }
+          }
+        }
+        p {
+          font-size: 19px;
+          letter-spacing: -1.25px;
+          line-height: 1.5em;
+          margin: 0 0 10px 0;
+        }
+      }
+    }
   `;
   const SlideContentBox = styled.div`
     background: url("images/introduce/6_pc_bg.png") no-repeat top center / 370px;
@@ -92,12 +119,34 @@ function IntroduceAudioBook() {
         right: 0;
       }
     }
+    @media (max-width: 1023px) {
+      background: url("images/introduce/6_pc_bg.png") no-repeat top center /
+        370px;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      height: unset;
+      max-width: 450px;
+      background: url("images/introduce/6_pc_bg.png") no-repeat top center /
+        190px;
+
+      padding: 80px 0 40px 0;
+      button {
+        display: none;
+      }
+    }
   `;
   const SlidePositionBox = styled.div`
     position: relative;
     height: 390px;
     max-width: 650px;
     margin: 0 auto;
+    @media (max-width: 1023px) {
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 241px;
+    }
   `;
   const SlidePerspective = styled.div`
     position: relative;
@@ -105,6 +154,11 @@ function IntroduceAudioBook() {
     max-width: 650px;
     height: 100%;
     overflow: hidden;
+    @media (max-width: 768px) {
+      width: 260px;
+
+      margin: 0 auto;
+    }
   `;
   // 슬라이드 3d position 옵션
   // 좌우간격 transform : 50px
@@ -184,6 +238,25 @@ function IntroduceAudioBook() {
         background: rgb(128, 120, 181);
         transform: translate3d(100px, 0px, -1065px) rotateX(0deg) rotateY(0deg);
         z-index: -2;
+      }
+    }
+    @media (max-width: 1023px) {
+    }
+    @media (max-width: 768px) {
+      padding: 10px 0;
+      transform: translate3d(-65px, 0, 0);
+      li {
+        width: 129px;
+        height: unset;
+        > p {
+          height: 18px;
+          font-size: 12px;
+          line-height: 18px;
+          margin: 12px 0 10px 0;
+        }
+        img {
+          width: 80px;
+        }
       }
     }
   `;
@@ -268,6 +341,36 @@ function IntroduceAudioBook() {
         }
       }
     }
+    @media (max-width: 768px) {
+      > a {
+        :last-of-type {
+          display: none;
+        }
+      }
+      figure {
+        margin: 0 auto;
+        padding: 0;
+        figcaption {
+          margin: 0 auto;
+          /* 제목 */
+          p {
+            margin: 5px auto;
+            width: 80px;
+            height: 30px;
+            font-family: "Noto Sans KR", sans-serif;
+            font-size: 12px;
+            line-height: 1.33;
+          }
+          /* 글쓴이 info Box */
+          > div {
+            display: none;
+            /* 저자 */
+            div {
+            }
+          }
+        }
+      }
+    }
   `;
   // 리스트형태로 제공되는 콘텐츠
   // AudioList Article
@@ -323,6 +426,22 @@ function IntroduceAudioBook() {
         }
       }
     }
+    @media (max-width: 768px) {
+      header {
+        width: 580px;
+        h3 {
+          font-size: 20px !important;
+          font-weight: 300;
+          span {
+            font-weight: 300;
+            ::after {
+              height: 6px;
+              bottom: 3px;
+            }
+          }
+        }
+      }
+    }
   `;
   const FlexUlBox = styled.ul`
     width: 1024px;
@@ -341,6 +460,10 @@ function IntroduceAudioBook() {
         padding: 0;
 
         position: relative;
+        img {
+          width: 100%;
+          box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.1);
+        }
         a {
           position: absolute;
           top: 137px;
@@ -350,6 +473,7 @@ function IntroduceAudioBook() {
           font-size: 0;
           img {
             font-size: 14px;
+            border-radius: 30%;
           }
         }
         figcaption {
@@ -371,6 +495,40 @@ function IntroduceAudioBook() {
         }
       }
     }
+    @media (max-width: 768px) {
+      width: 580px;
+      margin: 40px auto 50px;
+      li {
+        width: 115px;
+        margin-right: 20px;
+        figure {
+          a {
+            width: 42px;
+            height: 42px;
+            top: 88px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          figcaption {
+            font-size: 15px;
+            span {
+              display: inline-block;
+              width: 100%;
+              height: auto;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              letter-spacing: -0.6px;
+            }
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
   `;
   return (
     <SectionAudioBook className="section_content-audiobook">
@@ -387,6 +545,54 @@ function IntroduceAudioBook() {
           <SlidePositionBox className="slide-position">
             <SlidePerspective className="slide-perspective">
               <SlideListBox>
+                <li>
+                  <p>6월 이달의책</p>
+                  <MonthBookFlexBox className="MonthBook">
+                    <a href="#">
+                      <figure>
+                        <img
+                          src="images/slide/audioBook/banner/7688-2-1591577378332.jpg"
+                          alt=""
+                        ></img>
+                        <figcaption>
+                          <p>성공하는 사람들의 7가지 습관</p>
+                          <div>
+                            <img
+                              src="images/slide/audioBook/people/default.png"
+                              alt="스티븐 코비 (Stephen Richards Covey)"
+                            ></img>
+                            <div>
+                              <p>저자</p>
+                              <p>스티븐 코비 (Stephen Richards Covey)</p>
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+
+                    <a href="#">
+                      <figure>
+                        <img
+                          src="images/slide/audioBook/banner/6258-2-1591023829818.jpg"
+                          alt=""
+                        ></img>
+                        <figcaption>
+                          <p>파워풀</p>
+                          <div>
+                            <img
+                              src="images/slide/audioBook/people/8076-2-1591605876950.jpg"
+                              alt="패티 맥코드"
+                            ></img>
+                            <div>
+                              <p>저자</p>
+                              <p>패티 맥코드</p>
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </MonthBookFlexBox>
+                </li>
                 <li>
                   <p>6월 이달의책</p>
                   <MonthBookFlexBox className="MonthBook">

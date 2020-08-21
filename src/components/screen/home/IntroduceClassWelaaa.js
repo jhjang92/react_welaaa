@@ -61,6 +61,33 @@ function IntroduceClassWelaaa() {
         }
       }
     }
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 0px 18px 13px;
+      header {
+        text-align: left;
+        h3 {
+          font-size: 29px;
+          line-height: 1.3em;
+          letter-spacing: -1px;
+          :last-of-type {
+            margin-bottom: 8px;
+          }
+          span {
+            ::after {
+              height: 6px;
+              bottom: 1px;
+            }
+          }
+        }
+        p {
+          font-size: 19px;
+          letter-spacing: -1.25px;
+          line-height: 1.5em;
+          margin: 0 0 10px 0;
+        }
+      }
+    }
   `;
   const SlideContentBox = styled.div`
     background: url("images/introduce/4_pc_bg.png") no-repeat top center / 370px;
@@ -84,12 +111,33 @@ function IntroduceClassWelaaa() {
         right: 0;
       }
     }
+    @media (max-width: 1023px) {
+      background: url("images/introduce/4_pc_bg.png") no-repeat top center /
+        370px;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      height: unset;
+      max-width: 450px;
+      background: url("images/introduce/4_pc_bg.png") no-repeat top center /
+        190px;
+
+      padding: 80px 0 40px 0;
+      button {
+        display: none;
+      }
+    }
   `;
   const SlidePositionBox = styled.div`
     position: relative;
     height: 390px;
     max-width: 650px;
     margin: 0 auto;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 241px;
+    }
   `;
   const SlidePerspective = styled.div`
     position: relative;
@@ -97,6 +145,11 @@ function IntroduceClassWelaaa() {
     max-width: 650px;
     height: 100%;
     overflow: hidden;
+    @media (max-width: 768px) {
+      width: 260px;
+
+      margin: 0 auto;
+    }
   `;
   // 슬라이드 3d position 옵션
   // 좌우간격 transform : 50px
@@ -164,6 +217,23 @@ function IntroduceClassWelaaa() {
         z-index: -1;
       }
     }
+    @media (max-width: 768px) {
+      padding: 10px 0;
+      transform: translate3d(-65px, 0, 0);
+      li {
+        width: 129px;
+        height: unset;
+        > p {
+          height: 18px;
+          font-size: 12px;
+          line-height: 18px;
+          margin: 12px 0 10px 0;
+        }
+        img {
+          width: 80px;
+        }
+      }
+    }
   `;
 
   // ClassList Article
@@ -205,6 +275,32 @@ function IntroduceClassWelaaa() {
         }
       }
     }
+    @media (max-width: 1023px) {
+      header {
+        h3 {
+          font-size: 30px;
+          :last-of-type {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      header {
+        width: 580px;
+        h3 {
+          font-size: 20px !important;
+          font-weight: 300;
+          span {
+            font-weight: 300;
+            ::after {
+              height: 6px;
+              bottom: 3px;
+            }
+          }
+        }
+      }
+    }
   `;
   const FlexUlBox = styled.ul`
     width: 1024px;
@@ -224,6 +320,7 @@ function IntroduceClassWelaaa() {
 
         position: relative;
         > img {
+          width: 100%;
           border-radius: 9px;
           box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.3);
         }
@@ -257,6 +354,40 @@ function IntroduceClassWelaaa() {
         }
       }
     }
+    @media (max-width: 768px) {
+      width: 580px;
+      margin: 40px auto 50px;
+      li {
+        width: 115px;
+        margin-right: 20px;
+        figure {
+          a {
+            width: 42px;
+            height: 42px;
+            top: 88px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          figcaption {
+            font-size: 15px;
+            span {
+              display: inline-block;
+              width: 100%;
+              height: auto;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              letter-spacing: -0.6px;
+            }
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
   `;
   return (
     <SectionClassWelaaa className="section_content_welaaaclass">
@@ -267,7 +398,7 @@ function IntroduceClassWelaaa() {
           <h3>
             <span>윌라 클래스</span>
           </h3>
-          역량 개발부터 인문교양까지 모든 강의를 한 번에!
+          <p>역량 개발부터 인문교양까지 모든 강의를 한 번에!</p>
         </header>
         <SlideContentBox className="section_slide-content">
           <SlidePositionBox className="slide-position">
