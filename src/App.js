@@ -1,13 +1,15 @@
 import React from "react";
+import styled, { createGlobalStyle } from "styled-components";
+
 import HeaderWeb from "./components/commons/HeaderWeb";
 import HeaderMobile from "./components/commons/HeaderMobile";
 import HomeMain from "./components/home/HomeMain";
 import Footer from "./components/commons/Footer";
-import styled, { createGlobalStyle } from "styled-components";
+import { WelaaaProvider } from "./components/welaaaContext";
 
 function App() {
   return (
-    <>
+    <WelaaaProvider>
       <GlobalStyle />
       {/* 추후 모바일 웹 분기하여 header 노출 */}
       {/* <Header /> */}
@@ -15,7 +17,7 @@ function App() {
       {/* 나중에 라우터로 main을 분기할예정. 홈일땐 HomeMain class일땐 ClassMain */}
       <HomeMain />
       <Footer />
-    </>
+    </WelaaaProvider>
   );
 }
 

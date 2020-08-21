@@ -1,6 +1,16 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { useInitDispatch, useInitState } from "../welaaaContext";
 function HeaderWeb() {
+  console.log("HeaderWeb");
+  const dispatch = useInitDispatch();
+  const state = useInitState();
+
+  const onToggleAllMenu = () =>
+    dispatch({
+      type: "ALLMENU",
+    });
+
   return (
     <Header>
       <HeaderTopBox className="header_top-box">
@@ -37,7 +47,7 @@ function HeaderWeb() {
       </HeaderTopBox>
       <HeaderGnbBox className="header_gnb-box">
         <HeaderGnbMediaBox>
-          <HeaderGnbNav>
+          <HeaderGnbNav allMenu={state.allMenu}>
             <ul>
               <li>
                 <a href="#">윌라 소개</a>
@@ -52,7 +62,9 @@ function HeaderWeb() {
                 <a href="#">마이윌라</a>
               </li>
               <li>
-                <button type="button">전체메뉴</button>
+                <button type="button" onClick={onToggleAllMenu}>
+                  전체메뉴
+                </button>
               </li>
             </ul>
           </HeaderGnbNav>
@@ -67,7 +79,7 @@ function HeaderWeb() {
             <a href="#">윌라 멤버십 소개</a>
           </HeaderSnbBox>
         </HeaderGnbMediaBox>
-        <HeaderGnbAllMenu>
+        <HeaderGnbAllMenu allMenu={state.allMenu}>
           <AllMenuBox>
             <div>
               <span>클래스</span>
@@ -216,7 +228,7 @@ function HeaderWeb() {
     </Header>
   );
 }
-export default HeaderWeb;
+export default React.memo(HeaderWeb);
 
 const Header = styled.header`
   height: 170px;
@@ -376,11 +388,13 @@ const HeaderGnbNav = styled.nav`
           background-position: 0 0;
         }
         /* 클릭시 화살표 반전 클래스 추가 */
-        &.active {
-          ::after {
-            background-position: 0 -7px;
-          }
-        }
+        ${(props) =>
+          props.allMenu &&
+          css`
+            ::after {
+              background-position: 0 -7px;
+            }
+          `}
       }
     }
   }
@@ -409,19 +423,21 @@ const HeaderGnbAllMenu = styled.div`
   background: white;
   padding: 30px 0 25px;
   box-sizing: border-box;
-  display: flex;
   justify-content: center;
 
   display: none;
   z-index: 999;
   /* 전체메뉴 클릭 시 class 추가 */
-  &.active {
-    display: block;
-  }
+  ${(props) =>
+    props.allMenu &&
+    css`
+      display: flex;
+    `}
 `;
 const AllMenuBox = styled.div`
   display: flex;
-  width: 1400px;
+  justify-content: center;
+  width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
   div {
@@ -459,6 +475,22 @@ const AllMenuBox = styled.div`
           line-height: 28px;
           color: #555;
         }
+      }
+    }
+  }
+  @media (min-width: 1600px) {
+    width: 1400px;
+    div {
+      .grid-box {
+        grid-template-columns: 224px 200px;
+      }
+    }
+  }
+  @media (max-width: 1599px) and (min-width: 1024px) {
+    width: 1000px;
+    div {
+      .grid-box {
+        grid-template-columns: 159px 147px;
       }
     }
   }
