@@ -1,254 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-function Header() {
-  const Header = styled.header`
-    height: 170px;
-    font-size: 14px;
-  `;
-  // 반응형 1024~1550 일때는 width1000px 및 space-between
-  const HeaderTopBox = styled.div`
-    width: 1400px;
-    height: 120px;
-    margin: 0 auto;
-    background: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    span {
-      color: #dddddd;
-    }
-    @media (max-width: 1599px) and (min-width: 1024px) {
-      width: 1000px;
-      justify-content: space-between;
-    }
-  `;
-  const HeaderTopUserBox = styled.div`
-    display: flex;
-    align-items: center;
-    img {
-      margin-right: 29px;
-    }
-    a {
-      margin-right: 20px;
-      cursor: pointer;
-      color: #555555;
-    }
-    a:last-of-type {
-      margin-right: 0;
-    }
-    span {
-      width: 1px;
-      height: 13px;
-      margin-right: 19px;
-      background-color: #dddddd;
-      box-sizing: border-box;
-    }
-  `;
-  const HeaderTopLogo = styled.h1`
-    font-size: 0;
-    a {
-      font-size: 34px;
-      img {
-        width: 88px;
-        height: 45px;
-        vertical-align: top;
-      }
-    }
-  `;
-  const HeaderTopSearch = styled.div`
-    display: flex;
-    align-items: center;
-    a {
-      cursor: pointer;
-      margin-right: 10px;
-      img {
-        width: 40px;
-      }
-    }
-  `;
-  const HeaderTopSearchBox = styled.div`
-    width: 260px;
-    height: 42px;
-    margin: 0;
-    padding: 0;
-    border: solid 1px #dbdbdb;
-    position: relative;
-    background-color: #fafafa;
-    border-radius: 5px;
-    box-sizing: border-box;
-
-    input {
-      width: calc(100% - 46px);
-      height: 100%;
-      box-sizing: border-box;
-      padding-left: 19px;
-      color: #545454;
-      background-color: transparent;
-      font-size: 14px;
-      font-weight: 400;
-      letter-spacing: 0;
-    }
-    button {
-      padding: 12px 15px;
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      cursor: pointer;
-    }
-  `;
-  const HeaderGnbBox = styled.div`
-    height: 50px;
-    background: #00c73c;
-    box-sizing: border-box;
-    position: relative;
-    &.fixed {
-      position: fixed;
-      z-index: 999;
-      width: 100%;
-      top: 0;
-    }
-  `;
-  const HeaderGnbMediaBox = styled.div`
-    width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    @media (max-width: 1599px) and (min-width: 1024px) {
-      width: 1000px;
-      justify-content: space-between;
-    }
-  `;
-  const HeaderGnbNav = styled.nav`
-    ul {
-      display: flex;
-      justify-content: space-between;
-      li {
-        height: 50px;
-        line-height: 50px;
-        margin-right: 30px;
-        font-size: 19px;
-        :nth-of-type(4) {
-          margin-right: 0;
-          ::after {
-            content: "";
-            width: 1px;
-            height: 17px;
-            background: #11a46b;
-            display: inline-block;
-            margin: 0 20px;
-          }
-        }
-        a {
-          font-weight: 700;
-          color: #fff;
-        }
-        button {
-          font-size: 19px;
-          color: #fff;
-          font-weight: bold;
-          cursor: pointer;
-          ::after {
-            content: "";
-            width: 13px;
-            height: 7px;
-            margin: 0 0 8px 13px;
-            display: inline-block;
-            background-image: url("images/icons/web-ic-gnb-angle-down.png");
-            background-repeat: no-repeat;
-            background-position: 0 0;
-          }
-          /* 클릭시 화살표 반전 클래스 추가 */
-          &.active {
-            ::after {
-              background-position: 0 -7px;
-            }
-          }
-        }
-      }
-    }
-  `;
-  const HeaderSnbBox = styled.div`
-    display: flex;
-    align-items: center;
-    a {
-      color: #fff;
-      img {
-        vertical-align: middle;
-        width: 42px;
-        margin-right: 5px;
-      }
-      span {
-        margin-right: 20px;
-        color: #fff;
-      }
-    }
-  `;
-
-  // gnb 카테고리 hover 시 보일 전체 메뉴 Box - start
-  const HeaderGnbAllMenu = styled.div`
-    width: 100%;
-    position: absolute;
-    left: 0;
-    background: white;
-    padding: 30px 0 25px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-
-    display: none;
-    z-index: 999;
-    /* 전체메뉴 클릭 시 class 추가 */
-    &.active {
-      display: block;
-    }
-  `;
-  const AllMenuBox = styled.div`
-    display: flex;
-    width: 1400px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    div {
-      padding-left: 40px;
-      border-left: 1px solid #ddd;
-      box-sizing: border-box;
-      span {
-        color: #00c73c;
-        font-size: 17px;
-        font-weight: 700;
-      }
-      .grid-box {
-        display: grid;
-        grid-template-columns: 224px 200px;
-        grid-template-rows: auto;
-        margin-top: 6px;
-        li {
-          a {
-            line-height: 28px;
-            color: #555;
-          }
-          :first-of-type {
-            grid-column-start: 1;
-            grid-column-end: 3;
-            a {
-              color: #ff761b;
-              white-space: nowrap;
-            }
-          }
-        }
-      }
-      .grid-unset {
-        li {
-          a {
-            line-height: 28px;
-            color: #555;
-          }
-        }
-      }
-    }
-  `;
-  // gnb 카테고리 hover 시 보일 전체 메뉴 Box - end
-
+function HeaderWeb() {
   return (
     <Header>
       <HeaderTopBox className="header_top-box">
@@ -464,4 +216,251 @@ function Header() {
     </Header>
   );
 }
-export default Header;
+export default HeaderWeb;
+
+const Header = styled.header`
+  height: 170px;
+  font-size: 14px;
+`;
+// 반응형 1024~1550 일때는 width1000px 및 space-between
+const HeaderTopBox = styled.div`
+  width: 1400px;
+  height: 120px;
+  margin: 0 auto;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    color: #dddddd;
+  }
+  @media (max-width: 1599px) and (min-width: 1024px) {
+    width: 1000px;
+    justify-content: space-between;
+  }
+`;
+const HeaderTopUserBox = styled.div`
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: 29px;
+  }
+  a {
+    margin-right: 20px;
+    cursor: pointer;
+    color: #555555;
+  }
+  a:last-of-type {
+    margin-right: 0;
+  }
+  span {
+    width: 1px;
+    height: 13px;
+    margin-right: 19px;
+    background-color: #dddddd;
+    box-sizing: border-box;
+  }
+`;
+const HeaderTopLogo = styled.h1`
+  font-size: 0;
+  a {
+    font-size: 34px;
+    img {
+      width: 88px;
+      height: 45px;
+      vertical-align: top;
+    }
+  }
+`;
+const HeaderTopSearch = styled.div`
+  display: flex;
+  align-items: center;
+  a {
+    cursor: pointer;
+    margin-right: 10px;
+    img {
+      width: 40px;
+    }
+  }
+`;
+const HeaderTopSearchBox = styled.div`
+  width: 260px;
+  height: 42px;
+  margin: 0;
+  padding: 0;
+  border: solid 1px #dbdbdb;
+  position: relative;
+  background-color: #fafafa;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  input {
+    width: calc(100% - 46px);
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 19px;
+    color: #545454;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  button {
+    padding: 12px 15px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+`;
+const HeaderGnbBox = styled.div`
+  height: 50px;
+  background: #00c73c;
+  box-sizing: border-box;
+  position: relative;
+  &.fixed {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+  }
+`;
+const HeaderGnbMediaBox = styled.div`
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1599px) and (min-width: 1024px) {
+    width: 1000px;
+    justify-content: space-between;
+  }
+`;
+const HeaderGnbNav = styled.nav`
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      height: 50px;
+      line-height: 50px;
+      margin-right: 30px;
+      font-size: 19px;
+      :nth-of-type(4) {
+        margin-right: 0;
+        ::after {
+          content: "";
+          width: 1px;
+          height: 17px;
+          background: #11a46b;
+          display: inline-block;
+          margin: 0 20px;
+        }
+      }
+      a {
+        font-weight: 700;
+        color: #fff;
+      }
+      button {
+        font-size: 19px;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        ::after {
+          content: "";
+          width: 13px;
+          height: 7px;
+          margin: 0 0 8px 13px;
+          display: inline-block;
+          background-image: url("images/icons/web-ic-gnb-angle-down.png");
+          background-repeat: no-repeat;
+          background-position: 0 0;
+        }
+        /* 클릭시 화살표 반전 클래스 추가 */
+        &.active {
+          ::after {
+            background-position: 0 -7px;
+          }
+        }
+      }
+    }
+  }
+`;
+const HeaderSnbBox = styled.div`
+  display: flex;
+  align-items: center;
+  a {
+    color: #fff;
+    img {
+      vertical-align: middle;
+      width: 42px;
+      margin-right: 5px;
+    }
+    span {
+      margin-right: 20px;
+      color: #fff;
+    }
+  }
+`;
+// gnb 카테고리 hover 시 보일 전체 메뉴 Box - start
+const HeaderGnbAllMenu = styled.div`
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background: white;
+  padding: 30px 0 25px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+
+  display: none;
+  z-index: 999;
+  /* 전체메뉴 클릭 시 class 추가 */
+  &.active {
+    display: block;
+  }
+`;
+const AllMenuBox = styled.div`
+  display: flex;
+  width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  div {
+    padding-left: 40px;
+    border-left: 1px solid #ddd;
+    box-sizing: border-box;
+    span {
+      color: #00c73c;
+      font-size: 17px;
+      font-weight: 700;
+    }
+    .grid-box {
+      display: grid;
+      grid-template-columns: 224px 200px;
+      grid-template-rows: auto;
+      margin-top: 6px;
+      li {
+        a {
+          line-height: 28px;
+          color: #555;
+        }
+        :first-of-type {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          a {
+            color: #ff761b;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    .grid-unset {
+      li {
+        a {
+          line-height: 28px;
+          color: #555;
+        }
+      }
+    }
+  }
+`;
+// gnb 카테고리 hover 시 보일 전체 메뉴 Box - end

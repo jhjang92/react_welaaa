@@ -2,59 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 function IntroduceBanner4() {
-  const SectionBanner = styled.section`
-    background: url("images/web-banner/200723_PC4-1.jpg") center / cover;
-
-    height: 570px;
-
-    h2 {
-      margin: 0;
-      padding: 0;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-    @media (max-width: 1023px) {
-      background: url("images/web-banner/200723_MO4.jpg") center / cover;
-      height: 1290px;
-    }
-  `;
-  const FlexBox = styled.div`
-    width: 1044px;
-    margin: 80px auto 0;
-
-    display: flex;
-    flex-direction: column;
-    padding-left: 22px;
-    img {
-      width: 638px;
-      margin-bottom: 30px;
-    }
-    @media (max-width: 1023px) {
-      padding: 0px 6.944vw;
-      img {
-        width: 77.222vw;
-        height: 38.611vw;
-        margin-bottom: 6.944vw;
-        content: url("images/web-banner/200723_MO4-2.png");
-      }
-    }
-  `;
-  const TextBox = styled.div`
-    p {
-      color: #fff;
-      margin: 0 0 15px;
-      font-size: 16px;
-      font-weight: 200;
-    }
-    @media (max-width: 1023px) {
-      p {
-        font-size: 2.6vw;
-        margin-bottom: 2.778vw;
-        line-height: 1.67 !important;
-      }
-    }
-  `;
   return (
     <SectionBanner className="section_banner4-introduce">
       <h2>BRAND STORY</h2>
@@ -82,3 +29,57 @@ function IntroduceBanner4() {
 }
 
 export default IntroduceBanner4;
+
+const SectionBanner = styled.section`
+  background: url("images/web-banner/200723_PC4-1.jpg") center / cover;
+
+  height: 570px;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  @media (max-width: 1023px) {
+    background: url("images/web-banner/200723_MO4.jpg") center / cover;
+    height: 1290px;
+  }
+`;
+const FlexBox = styled.div`
+  width: 1044px;
+  margin: 80px auto 0;
+
+  display: flex;
+  flex-direction: column;
+  padding-left: 22px;
+  img {
+    width: 638px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 1023px) {
+    padding: 0px 6.944vw;
+    img {
+      width: 77.222vw;
+      height: 38.611vw;
+      margin-bottom: 6.944vw;
+      content: url("images/web-banner/200723_MO4-2.png");
+    }
+  }
+`;
+const TextBox = styled.div`
+  p {
+    color: #fff;
+    margin: 0 0 15px;
+    font-size: 16px;
+    font-weight: 200;
+  }
+  @media (max-width: 1023px) {
+    p {
+      font-size: 2.6vw;
+      margin-bottom: 2.778vw;
+      line-height: 1.67 !important;
+    }
+  }
+`;

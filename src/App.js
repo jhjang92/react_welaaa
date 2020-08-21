@@ -1,9 +1,25 @@
 import React from "react";
-import Header from "./components/commons/Header";
+import HeaderWeb from "./components/commons/HeaderWeb";
 import HeaderMobile from "./components/commons/HeaderMobile";
 import HomeMain from "./components/home/HomeMain";
 import Footer from "./components/commons/Footer";
 import styled, { createGlobalStyle } from "styled-components";
+
+function App() {
+  return (
+    <>
+      <GlobalStyle />
+      {/* 추후 모바일 웹 분기하여 header 노출 */}
+      {/* <Header /> */}
+      <HeaderWeb />
+      {/* 나중에 라우터로 main을 분기할예정. 홈일땐 HomeMain class일땐 ClassMain */}
+      <HomeMain />
+      <Footer />
+    </>
+  );
+}
+
+export default App;
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
@@ -30,19 +46,3 @@ const GlobalStyle = createGlobalStyle`
   }
 
 `;
-
-function App() {
-  return (
-    <>
-      <GlobalStyle />
-      {/* 추후 모바일 웹 분기하여 header 노출 */}
-      {/* <Header /> */}
-      <Header />
-      {/* 나중에 라우터로 main을 분기할예정. 홈일땐 HomeMain class일땐 ClassMain */}
-      <HomeMain />
-      <Footer />
-    </>
-  );
-}
-
-export default App;

@@ -1,176 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 function Footer() {
-  const Footer = styled.footer`
-    background: #666666;
-    position: relative;
-  `;
-  const FooterTop = styled.div`
-    width: 1400px;
-    height: 66px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .footer_menu {
-      display: flex;
-      li {
-        a {
-          color: #ccc;
-          font-size: 15px;
-          display: flex;
-          ::after {
-            content: "ㅣ";
-            display: block;
-            padding: 0 12px;
-            font-size: 13px;
-            box-sizing: border-box;
-            font-weight: 200;
-          }
-        }
-        :last-of-type {
-          a {
-            ::after {
-              display: none;
-            }
-          }
-        }
-        &.strong {
-          a {
-            font-weight: 500;
-          }
-        }
-      }
-    }
-    .footer_sns {
-      width: 150px;
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      right: 20px;
-
-      li {
-        a {
-          width: 27px;
-          height: 27px;
-          display: block;
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
-      }
-    }
-    @media (max-width: 1599px) and (min-width: 1024px) {
-      width: 1000px;
-    }
-    /* 모바일 반응형 */
-    @media (max-width: 1023px) {
-      width: calc(100% - 36px);
-      .footer_menu {
-        li {
-          a {
-            font-size: 12px !important;
-            ::after {
-              padding: 0 7px;
-              font-size: 11px;
-            }
-          }
-        }
-      }
-
-      .footer_sns {
-        bottom: 50px;
-        left: 18px;
-      }
-    }
-  `;
-  const FooterSaperator = styled.div`
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  `;
-  const FooterLogo = styled.div`
-    width: 1400px;
-    margin: 0 auto;
-    padding: 30px 0;
-    font-weight: 200;
-    font-size: 15px;
-    letter-spacing: -0.59px;
-    line-height: 16px;
-    color: #cccccc;
-    a {
-      img {
-        width: 100px;
-        height: 50px;
-        margin-right: 12px;
-        vertical-align: middle;
-      }
-    }
-    span {
-      color: #cccccc;
-      font-weight: 500;
-    }
-
-    @media (max-width: 1599px) and (min-width: 1024px) {
-      width: 1000px;
-    }
-    @media (max-width: 1023px) {
-      width: calc(100% - 36px);
-      padding: 20px 0px 0;
-      font-size: 10px;
-      letter-spacing: -0.39px;
-      a {
-        img {
-          width: 63px;
-          height: 32px;
-          margin-right: 10px;
-        }
-      }
-    }
-  `;
-  const P_Address = styled.p`
-    width: 1400px;
-    margin: 0 auto;
-
-    font-size: 16px;
-    font-weight: 200;
-    color: #cccccc;
-    letter-spacing: 0;
-    line-height: 26px;
-    box-sizing: border-box;
-
-    padding-bottom: 40px;
-
-    @media (max-width: 1599px) and (min-width: 1024px) {
-      width: 1000px;
-    }
-    @media (max-width: 1023px) {
-      width: calc(100% - 36px);
-      padding: 20px 0 96px;
-      font-size: 11px;
-      line-height: 1.67;
-    }
-    .footer_bar {
-      color: #cccccc;
-      padding: 0 12px;
-    }
-    .callNumber {
-      color: white;
-    }
-    .mailTo {
-      color: white;
-    }
-    .copy {
-      font-weight: 300;
-      font-size: 12px;
-      color: #cccccc;
-      line-height: 23px;
-    }
-  `;
   return (
-    <Footer>
+    <FooterTag>
       <FooterTop className="footer_top">
         <ul className="footer_menu">
           <li>
@@ -273,8 +105,177 @@ function Footer() {
         <br />
         <span className="copy">Copyright @2020 influential</span>
       </P_Address>
-    </Footer>
+    </FooterTag>
   );
 }
 
 export default Footer;
+
+const FooterTag = styled.footer`
+  background: #666666;
+  position: relative;
+`;
+const FooterTop = styled.div`
+  width: 1400px;
+  height: 66px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .footer_menu {
+    display: flex;
+    li {
+      a {
+        color: #ccc;
+        font-size: 15px;
+        display: flex;
+        ::after {
+          content: "ㅣ";
+          display: block;
+          padding: 0 12px;
+          font-size: 13px;
+          box-sizing: border-box;
+          font-weight: 200;
+        }
+      }
+      :last-of-type {
+        a {
+          ::after {
+            display: none;
+          }
+        }
+      }
+      &.strong {
+        a {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .footer_sns {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 20px;
+
+    li {
+      a {
+        width: 27px;
+        height: 27px;
+        display: block;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  @media (max-width: 1599px) and (min-width: 1024px) {
+    width: 1000px;
+  }
+  /* 모바일 반응형 */
+  @media (max-width: 1023px) {
+    width: calc(100% - 36px);
+    .footer_menu {
+      li {
+        a {
+          font-size: 12px !important;
+          ::after {
+            padding: 0 7px;
+            font-size: 11px;
+          }
+        }
+      }
+    }
+
+    .footer_sns {
+      bottom: 50px;
+      left: 18px;
+    }
+  }
+`;
+const FooterSaperator = styled.div`
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+`;
+const FooterLogo = styled.div`
+  width: 1400px;
+  margin: 0 auto;
+  padding: 30px 0;
+  font-weight: 200;
+  font-size: 15px;
+  letter-spacing: -0.59px;
+  line-height: 16px;
+  color: #cccccc;
+  a {
+    img {
+      width: 100px;
+      height: 50px;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+  }
+  span {
+    color: #cccccc;
+    font-weight: 500;
+  }
+
+  @media (max-width: 1599px) and (min-width: 1024px) {
+    width: 1000px;
+  }
+  @media (max-width: 1023px) {
+    width: calc(100% - 36px);
+    padding: 20px 0px 0;
+    font-size: 10px;
+    letter-spacing: -0.39px;
+    a {
+      img {
+        width: 63px;
+        height: 32px;
+        margin-right: 10px;
+      }
+    }
+  }
+`;
+const P_Address = styled.p`
+  width: 1400px;
+  margin: 0 auto;
+
+  font-size: 16px;
+  font-weight: 200;
+  color: #cccccc;
+  letter-spacing: 0;
+  line-height: 26px;
+  box-sizing: border-box;
+
+  padding-bottom: 40px;
+
+  @media (max-width: 1599px) and (min-width: 1024px) {
+    width: 1000px;
+  }
+  @media (max-width: 1023px) {
+    width: calc(100% - 36px);
+    padding: 20px 0 96px;
+    font-size: 11px;
+    line-height: 1.67;
+  }
+  .footer_bar {
+    color: #cccccc;
+    padding: 0 12px;
+  }
+  .callNumber {
+    color: white;
+  }
+  .mailTo {
+    color: white;
+  }
+  .copy {
+    font-weight: 300;
+    font-size: 12px;
+    color: #cccccc;
+    line-height: 23px;
+  }
+`;

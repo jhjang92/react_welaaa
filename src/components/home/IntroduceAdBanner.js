@@ -2,24 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 function IntroduceAdBanner() {
-  const AdBannerBox = styled.div`
-    cursor: pointer;
-    a {
-      display: block;
-      font-size: 0;
-      img {
-        font-size: 14px;
-        width: 100%;
-      }
-    }
-    @media (max-width: 1023px) {
-      a {
-        img {
-          content: url(images/static/banner-web/오디오북카드지갑_375x125.jpg);
-        }
-      }
-    }
-  `;
   return (
     <AdBannerBox className="banner-ad">
       <a
@@ -36,3 +18,22 @@ function IntroduceAdBanner() {
 }
 
 export default IntroduceAdBanner;
+
+const AdBannerBox = styled.div`
+  cursor: pointer;
+  a {
+    display: block;
+    font-size: 0;
+    img {
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+  @media (max-width: 1023px) {
+    a {
+      img {
+        content: url(images/static/banner-web/오디오북카드지갑_375x125.jpg);
+      }
+    }
+  }
+`;
