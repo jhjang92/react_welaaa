@@ -10,9 +10,11 @@ import React, {
 // ex) 팝업창 true,false여부
 //  mobile,web 전환여부 등
 // device: true === mobile , false === web
-const initWelaaa = {
+const initStateWelaaa = {
   device: false,
   allMenu: false,
+  burgerMenu: false,
+  searchBar: false,
 };
 
 function mainReducer(state, action) {
@@ -24,6 +26,10 @@ function mainReducer(state, action) {
       };
     case "ALLMENU":
       return { ...state, allMenu: !state.allMenu };
+    case "BURGERMENU":
+      return { ...state, burgerMenu: !state.burgerMenu };
+    case "SEARCHBAR":
+      return { ...state, searchBar: !state.searchBar };
     default:
       throw new Error(`Unhandled action type: $(action.type)`);
   }
@@ -34,7 +40,7 @@ const InitDispatchContext = createContext();
 
 export function WelaaaProvider({ children }) {
   console.log("WelaaaProvider");
-  const [state, dispatch] = useReducer(mainReducer, initWelaaa);
+  const [state, dispatch] = useReducer(mainReducer, initStateWelaaa);
 
   return (
     <InitStateContext.Provider value={state}>

@@ -1,8 +1,7 @@
 import React, { useRef, useLayoutEffect } from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { css, createGlobalStyle } from "styled-components";
 
-import HeaderWeb from "./components/commons/HeaderWeb";
-import HeaderMobile from "./components/commons/HeaderMobile";
+import Header from "./components/commons/Header";
 import HomeMain from "./components/home/HomeMain";
 import Footer from "./components/commons/Footer";
 import { useInitState, useInitDispatch } from "./components/welaaaContext";
@@ -16,13 +15,21 @@ function App() {
   useLayoutEffect(() => {
     console.log("useLayoutEffect");
     function updateResize() {
-      if (window.innerWidth <= 1023 && !resizeState.current) {
+      console.log(window.innerWidth);
+      console.log(window.outerWidth);
+      if (
+        window.outerWidth <= 1023 ||
+        (window.innerWidth <= 1023 && !resizeState.current)
+      ) {
         resizeState.current = true;
         dispatch({
           type: "DEVICE",
           device: true,
         });
-      } else if (window.innerWidth >= 1024 && resizeState.current) {
+      } else if (
+        window.outerWidth >= 1024 ||
+        (window.innerWidth >= 1024 && resizeState.current)
+      ) {
         resizeState.current = false;
         dispatch({
           type: "DEVICE",
@@ -36,8 +43,8 @@ function App() {
 
   return (
     <>
-      <GlobalStyle />
-      {state.device ? <HeaderMobile /> : <HeaderWeb />}
+      <GlobalStyle open={state.burgerMenu} />
+      <Header />
       {/* 나중에 라우터로 main을 분기할예정. 홈일땐 HomeMain class일땐 ClassMain */}
       <HomeMain />
       <Footer />
@@ -45,7 +52,7 @@ function App() {
   );
 }
 
-export default React.memo(App);
+export default App;
 
 const GlobalStyle = createGlobalStyle`
 
@@ -65,5 +72,13 @@ const GlobalStyle = createGlobalStyle`
     background: none;
     color: black;
   }
-
+  @media(max-width: 768px){
+    ${(props) =>
+      props.open &&
+      css`
+        body {
+          overflow-y: hidden;
+        }
+      `}
+  }
 `;

@@ -47,7 +47,7 @@ function HeaderWeb() {
       </HeaderTopBox>
       <HeaderGnbBox className="header_gnb-box">
         <HeaderGnbMediaBox>
-          <HeaderGnbNav allMenu={state.allMenu}>
+          <HeaderGnbNav open={state.allMenu}>
             <ul>
               <li>
                 <a href="#">윌라 소개</a>
@@ -79,7 +79,7 @@ function HeaderWeb() {
             <a href="#">윌라 멤버십 소개</a>
           </HeaderSnbBox>
         </HeaderGnbMediaBox>
-        <HeaderGnbAllMenu allMenu={state.allMenu}>
+        <HeaderGnbAllMenu open={state.allMenu}>
           <AllMenuBox>
             <div>
               <span>클래스</span>
@@ -389,7 +389,7 @@ const HeaderGnbNav = styled.nav`
         }
         /* 클릭시 화살표 반전 클래스 추가 */
         ${(props) =>
-          props.allMenu &&
+          props.open &&
           css`
             ::after {
               background-position: 0 -7px;
@@ -429,7 +429,7 @@ const HeaderGnbAllMenu = styled.div`
   z-index: 999;
   /* 전체메뉴 클릭 시 class 추가 */
   ${(props) =>
-    props.allMenu &&
+    props.open &&
     css`
       display: flex;
     `}

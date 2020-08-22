@@ -14,6 +14,7 @@ import IntroduceAdBanner from "./IntroduceAdBanner";
 import styled from "styled-components";
 
 function HomeMain() {
+  console.log("HomeMain");
   return (
     <Main>
       {/* 섹션마다 백그라운드이미지 추가하기. 1200 / 640 cover */}
@@ -44,7 +45,7 @@ function HomeMain() {
   );
 }
 
-export default HomeMain;
+export default React.memo(HomeMain);
 
 const Main = styled.main`
   overflow: hidden;

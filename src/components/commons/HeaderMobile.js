@@ -1,7 +1,26 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useRef } from "react";
+import styled, { css } from "styled-components";
+import { useInitState, useInitDispatch } from "../welaaaContext";
 
 function HeaderMobile() {
+  console.log("HeaderMobile");
+  const state = useInitState();
+  const dispatch = useInitDispatch();
+  const menuList = useRef();
+  const onToggleBurgurMenu = () => {
+    dispatch({
+      type: "BURGERMENU",
+    });
+  };
+  const onToggleHeaderSearchBar = () => {
+    dispatch({
+      type: "SEARCHBAR",
+    });
+  };
+  const onToggleBurgerAccordion = (e) => {
+    console.log(e.currentTarget.parentNode);
+    e.currentTarget.parentNode.classList.toggle("open");
+  };
   return (
     <Header>
       <HeaderTop className="header-top">
@@ -9,7 +28,11 @@ function HeaderMobile() {
           윌라
           <img src="images/web-welaaa-logo-kr-mobile.png" alt="logo"></img>
         </h1>
-        <button type="button" className="buger-menu">
+        <button
+          type="button"
+          className="burger-menu"
+          onClick={onToggleBurgurMenu}
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -19,12 +42,16 @@ function HeaderMobile() {
           <a href="#">
             <img src="images/icons/cart.svg" alt="장바구니"></img>
           </a>
-          <button type="button">
+          <button type="button" onClick={onToggleHeaderSearchBar}>
             <img src="images/icons/ic-search.png" alt="검색창 열기"></img>
           </button>
         </div>
-        <HeaderSearchBar className="search-bar">
-          <button type="button" className="search-close">
+        <HeaderSearchBar className="search-bar" open={state.searchBar}>
+          <button
+            type="button"
+            className="search-close"
+            onClick={onToggleHeaderSearchBar}
+          >
             <span></span>
             <span></span>
             닫기
@@ -54,22 +81,26 @@ function HeaderMobile() {
           </li>
         </ul>
       </HeadeNavMenu>
-      <HeaderMenuAll className="buger-popup">
-        <div className="buger-container">
+      <HeaderMenuAll className="burger-popup" open={state.burgerMenu}>
+        <div className="burger-container">
           <div className="login-box">
             <span>지금 바로</span>
             <button type="button">로그인 하러가기</button>
           </div>
 
-          <ul className="menu-list-box">
+          <ul className="menu-list-box" ref={menuList}>
             <li className="block-list">
-              <button type="button">윌라 소개</button>
+              <button type="button" onClick={onToggleBurgerAccordion}>
+                윌라 소개
+              </button>
               <div className="block-box">
                 <a href="#">윌라 소개</a>
               </div>
             </li>
             <li className="grid-list">
-              <button type="button">클래스</button>
+              <button type="button" onClick={onToggleBurgerAccordion}>
+                클래스
+              </button>
               <div className="grid-box">
                 <a href="#">클래스 홈</a>
                 <a href="#">전체</a>
@@ -96,7 +127,9 @@ function HeaderMobile() {
               </div>
             </li>
             <li className="grid-list">
-              <button type="button">오디오북</button>
+              <button type="button" onClick={onToggleBurgerAccordion}>
+                오디오북
+              </button>
               <div className="grid-box">
                 <a href="#">오디오북 홈</a>
                 <a href="#">전체</a>
@@ -118,7 +151,9 @@ function HeaderMobile() {
               </div>
             </li>
             <li className="block-list">
-              <button type="button">마이윌라</button>
+              <button type="button" onClick={onToggleBurgerAccordion}>
+                마이윌라
+              </button>
               <div className="block-box">
                 <a href="#">로그인 해주세요</a>
               </div>
@@ -148,7 +183,11 @@ function HeaderMobile() {
             src="images/static/banner-web/오디오북카드지갑_375x125.jpg"
             alt="카드지갑"
           ></img>
-          <button type="button" className="popup-close">
+          <button
+            type="button"
+            className="popup-close"
+            onClick={onToggleBurgurMenu}
+          >
             <span></span>
             <span></span>
             닫기
@@ -159,7 +198,7 @@ function HeaderMobile() {
   );
 }
 
-export default HeaderMobile;
+export default React.memo(HeaderMobile);
 
 const Header = styled.header`
   position: fixed;
@@ -184,7 +223,7 @@ const HeaderTop = styled.div`
       height: 56px;
     }
   }
-  .buger-menu {
+  .burger-menu {
     order: 1;
     width: 40px;
     height: 40px;
@@ -242,7 +281,7 @@ const HeadeNavMenu = styled.nav`
     }
   }
 `;
-// buger menu popup window
+// burger menu popup window
 const HeaderMenuAll = styled.div`
   position: absolute;
   top: 0;
@@ -251,16 +290,25 @@ const HeaderMenuAll = styled.div`
   height: 100vh;
 
   display: none;
+  ${(props) =>
+    props.open &&
+    css`
+      display: block;
+    `}
   background: rgb(0, 0, 0, 0.3);
-  .buger-container {
+  .burger-container {
     width: 400px;
     height: 100vh;
     min-height: 100vh;
     background: white;
     position: relative;
     overflow-x: auto;
-    overflow-y: scroll;
-
+    overflow-y: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    ::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera*/
+    }
     .login-box {
       height: 130px;
       padding: 45px 0 0 30px;
@@ -315,11 +363,6 @@ const HeaderMenuAll = styled.div`
             background-position: 0 0;
             background-size: 14px 16px;
           }
-          &.active {
-            ::after {
-              background-position: 0 -8px;
-            }
-          }
         }
         div {
           display: none;
@@ -332,11 +375,6 @@ const HeaderMenuAll = styled.div`
             font-size: 13px;
             line-height: 30px;
           }
-          &.block-box {
-            &.active {
-              display: block;
-            }
-          }
           &.grid-box {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(6, 30px);
@@ -345,9 +383,20 @@ const HeaderMenuAll = styled.div`
                 color: #00c73c;
               }
             }
-            &.active {
-              display: grid;
+          }
+        }
+        /* burgerMenu - 아코디언 메뉴 onOff*/
+        &.open {
+          button {
+            ::after {
+              background-position: 0 -8px;
             }
+          }
+          .block-box {
+            display: block;
+          }
+          .grid-box {
+            display: grid;
           }
         }
       }
@@ -410,7 +459,7 @@ const HeaderMenuAll = styled.div`
     }
   }
   @media (max-width: 768px) {
-    .buger-container {
+    .burger-container {
       width: 100%;
     }
   }
@@ -428,10 +477,13 @@ const HeaderSearchBar = styled.div`
   z-index: 999;
 
   display: none;
-  &.active {
-    display: flex;
-    align-items: center;
-  }
+  ${(props) =>
+    props.open &&
+    css`
+      display: flex;
+      align-items: center;
+    `}
+
   /* 닫기 버튼 */
   .search-close {
     width: 40px;
