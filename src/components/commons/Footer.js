@@ -164,7 +164,7 @@ const FooterTop = styled.div`
     .footer_menu {
       li {
         a {
-          font-size: 12px !important;
+          font-size: 12px;
           ::after {
             padding: 0 7px;
             font-size: 11px;
@@ -176,6 +176,23 @@ const FooterTop = styled.div`
     .footer_sns {
       bottom: 50px;
       left: 18px;
+    }
+  }
+  @media (max-width: 460px) {
+    width: calc(100% - 20px);
+    .footer_menu {
+      li {
+        a {
+          font-size: 2.778vw;
+          padding: 1.944vw 0;
+        }
+        :nth-of-type(2) {
+          ::after {
+            content: "";
+            display: block;
+          }
+        }
+      }
     }
   }
 `;
@@ -222,6 +239,9 @@ const FooterLogo = styled.div`
       }
     }
   }
+  @media (max-width: 460px) {
+    width: calc(100% - 20px);
+  }
 `;
 const P_Address = styled.p`
   width: 1400px;
@@ -260,5 +280,8 @@ const P_Address = styled.p`
     font-size: 12px;
     color: #cccccc;
     line-height: 23px;
+  }
+  @media (max-width: 460px) {
+    width: calc(100% - 20px);
   }
 `;

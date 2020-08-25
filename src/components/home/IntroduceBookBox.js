@@ -18,44 +18,46 @@ function IntroduceBookBox() {
         </p>
         <p>지식인들의 10분 북인사이트</p>
       </header>
-      <FlexUlBox>
-        <li>
-          <a href="#">
-            <Figure>
-              <img
-                src="images/introduce/8_1.png"
-                alt="걸어서 출퇴근하는 배우"
-              ></img>
-              <figcaption>
-                <p>걷는사람,하정우</p>
-                <p>하정우</p>
-              </figcaption>
-            </Figure>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <Figure>
-              <img src="images/introduce/8_2.png" alt=""></img>
-              <figcaption>
-                <p>맥파이 살인사건</p>
-                <p>엔터니호로비츠</p>
-              </figcaption>
-            </Figure>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <Figure>
-              <img src="images/introduce/8_3.png" alt=""></img>
-              <figcaption>
-                <p>스물아홉 생일, 1년 후 죽기로 결심했다</p>
-                <p>하야마 아마리</p>
-              </figcaption>
-            </Figure>
-          </a>
-        </li>
-      </FlexUlBox>
+      <UlBox>
+        <FlexUl>
+          <li>
+            <a href="#">
+              <Figure>
+                <img
+                  src="images/introduce/8_1.png"
+                  alt="걸어서 출퇴근하는 배우"
+                ></img>
+                <figcaption>
+                  <p>걷는사람,하정우</p>
+                  <p>하정우</p>
+                </figcaption>
+              </Figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Figure>
+                <img src="images/introduce/8_2.png" alt=""></img>
+                <figcaption>
+                  <p>맥파이 살인사건</p>
+                  <p>엔터니호로비츠</p>
+                </figcaption>
+              </Figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Figure>
+                <img src="images/introduce/8_3.png" alt=""></img>
+                <figcaption>
+                  <p>스물아홉 생일, 1년 후 죽기로 결심했다</p>
+                  <p>하야마 아마리</p>
+                </figcaption>
+              </Figure>
+            </a>
+          </li>
+        </FlexUl>
+      </UlBox>
       <LinkFreeListen href="#">
         <button type="button">무료듣기</button>
       </LinkFreeListen>
@@ -145,9 +147,13 @@ const SectionBookBox = styled.section`
     }
   }
 `;
-const FlexUlBox = styled.ul`
+const UlBox = styled.div`
+  overflow: auto;
+`;
+const FlexUl = styled.ul`
   display: flex;
   justify-content: center;
+
   li {
     width: 234px;
     box-sizing: border-box;
@@ -189,7 +195,7 @@ const FlexUlBox = styled.ul`
   }
   @media (max-width: 768px) {
     width: 600px;
-    margin: 70px auto 0;
+    margin: 70px 0 0 18px;
     li {
       width: 180px;
       margin-right: 30px;

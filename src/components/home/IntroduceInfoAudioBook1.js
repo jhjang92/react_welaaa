@@ -126,6 +126,13 @@ const SectionInfo01 = styled.section`
       }
     }
   }
+  @media screen and (max-width: 480px) {
+    background-position: left 192px;
+    h3 {
+      font-size: 24px;
+      letter-spacing: -0.6px;
+    }
+  }
 `;
 const Ul = styled.ul`
   padding: 0;
@@ -286,9 +293,27 @@ const Ul = styled.ul`
     }
   }
   @media (max-width: 768px) {
-    margin: 55px auto 52px;
+    margin: 55px 0 52px;
+    width: 1100px;
     li {
       margin-right: 110px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    margin: 36px 0 32px;
+    li {
+      width: 61px;
+      p {
+        :first-of-type {
+          font-size: 16px;
+        }
+        :nth-of-type(2) {
+          font-size: 18px;
+        }
+        :last-of-type {
+          font-size: 12px;
+        }
+      }
     }
   }
 `;

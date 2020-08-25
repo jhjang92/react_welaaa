@@ -217,6 +217,9 @@ const UlFlex = styled.ul`
       box-shadow: none;
       padding: 25px !important;
       margin: 0 0 15px 0 !important;
+      :last-of-type {
+        margin: 0 !important;
+      }
     }
   }
 `;
@@ -367,6 +370,9 @@ const Button = styled.button`
     padding: 38px 0px !important;
     letter-spacing: -2px;
     text-align: center;
+
+    word-break: keep-all;
+    letter-spacing: -0.6px;
     ::after {
       width: 34px;
       height: 34px;

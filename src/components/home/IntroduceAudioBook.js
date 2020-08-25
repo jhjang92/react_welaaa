@@ -11,7 +11,10 @@ function IntroduceAudioBook() {
           <h3>
             <span>윌라 오디오북</span>
           </h3>
-          <p>최신작부터 베스트셀러까지,성우가 녹음해서 더 깊어지는 독서 생활</p>
+          <p>
+            <span>최신작부터 베스트셀러까지,</span>성우가 녹음해서 더 깊어지는
+            독서 생활
+          </p>
         </header>
         <SlideContentBox className="section_slide-content">
           <SlidePositionBox className="slide-position">
@@ -330,59 +333,61 @@ function IntroduceAudioBook() {
           </h3>
           <h3>윌라 오디오북으로 책을 더 생생하게 들으세요!</h3>
         </header>
-        <FlexUlBox className="section_list-content">
-          <li>
-            <figure>
-              <img
-                src="images/introduce/7_1.png"
-                alt="명견만리_불평등, 병리, 금융, 지역 편"
-              ></img>
-              <a href="#">
-                <img src="images/introduce/ic_play.png" alt="보러가기"></img>
-              </a>
-              <figcaption>
-                <span>명견만리_불평등, 병리, 금융, 지역 편</span>
-                <p>KBS 명견만리 제작팀</p>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="images/introduce/7_2.png" alt=""></img>
-              <a href="#">
-                <img src="images/introduce/ic_play.png" alt="보러가기"></img>
-              </a>
-              <figcaption>
-                <span>북유럽 신화</span>
-                <p>닐 게이먼</p>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="images/introduce/7_3.png" alt=""></img>
-              <a href="#">
-                <img src="images/introduce/ic_play.png" alt="보러가기"></img>
-              </a>
-              <figcaption>
-                <span>최고의 선택</span>
-                <p>김형철</p>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="images/introduce/7_4.png" alt=""></img>
-              <a href="#">
-                <img src="images/introduce/ic_play.png" alt="보러가기"></img>
-              </a>
-              <figcaption>
-                <span>너의 췌장을 먹고 싶어</span>
-                <p>스미노 요루</p>
-              </figcaption>
-            </figure>
-          </li>
-        </FlexUlBox>
+        <UlBox>
+          <FlexUl className="section_list-content">
+            <li>
+              <figure>
+                <img
+                  src="images/introduce/7_1.png"
+                  alt="명견만리_불평등, 병리, 금융, 지역 편"
+                ></img>
+                <a href="#">
+                  <img src="images/introduce/ic_play.png" alt="보러가기"></img>
+                </a>
+                <figcaption>
+                  <span>명견만리_불평등, 병리, 금융, 지역 편</span>
+                  <p>KBS 명견만리 제작팀</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="images/introduce/7_2.png" alt=""></img>
+                <a href="#">
+                  <img src="images/introduce/ic_play.png" alt="보러가기"></img>
+                </a>
+                <figcaption>
+                  <span>북유럽 신화</span>
+                  <p>닐 게이먼</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="images/introduce/7_3.png" alt=""></img>
+                <a href="#">
+                  <img src="images/introduce/ic_play.png" alt="보러가기"></img>
+                </a>
+                <figcaption>
+                  <span>최고의 선택</span>
+                  <p>김형철</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="images/introduce/7_4.png" alt=""></img>
+                <a href="#">
+                  <img src="images/introduce/ic_play.png" alt="보러가기"></img>
+                </a>
+                <figcaption>
+                  <span>너의 췌장을 먹고 싶어</span>
+                  <p>스미노 요루</p>
+                </figcaption>
+              </figure>
+            </li>
+          </FlexUl>
+        </UlBox>
       </ArticleAudioBookList>
     </SectionAudioBook>
   );
@@ -459,8 +464,9 @@ const ArticleAudioBookSlide = styled.article`
   }
   @media (max-width: 768px) {
     width: 100%;
-    padding: 0px 18px 13px;
+    padding: 0;
     header {
+      padding-left: 18px;
       text-align: left;
       h3 {
         font-size: 29px;
@@ -481,6 +487,21 @@ const ArticleAudioBookSlide = styled.article`
         letter-spacing: -1.25px;
         line-height: 1.5em;
         margin: 0 0 10px 0;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    header {
+      h3 {
+        font-size: 24px;
+        letter-spacing: -0.6px;
+      }
+      p {
+        font-size: 14px;
+        letter-spacing: -0.6px;
       }
     }
   }
@@ -804,6 +825,7 @@ const ArticleAudioBookList = styled.article`
   }
   @media (max-width: 1023px) {
     header {
+      width: 768px;
       h3 {
         font-size: 30px;
         :last-of-type {
@@ -816,7 +838,7 @@ const ArticleAudioBookList = styled.article`
     header {
       width: 580px;
       h3 {
-        font-size: 20px !important;
+        font-size: 20px;
         font-weight: 300;
         span {
           font-weight: 300;
@@ -828,12 +850,32 @@ const ArticleAudioBookList = styled.article`
       }
     }
   }
+  @media screen and (max-width: 480px) {
+    padding: 15px 0 50px;
+    header {
+      width: 100%;
+      h3 {
+        font-size: 18px;
+        :last-of-type {
+          font-size: 18px;
+        }
+      }
+    }
+  }
 `;
-const FlexUlBox = styled.ul`
-  width: 1024px;
+const UlBox = styled.div`
   margin: 40px auto 168px;
+  @media (max-width: 768px) {
+    margin: 40px 0 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+`;
+const FlexUl = styled.ul`
+  width: 1024px;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
   li {
     width: 162px;
     margin-right: 25px;
@@ -881,9 +923,11 @@ const FlexUlBox = styled.ul`
       }
     }
   }
+  @media (max-width: 1023px) {
+    width: 768px;
+  }
   @media (max-width: 768px) {
     width: 580px;
-    margin: 40px auto 50px;
     li {
       width: 115px;
       margin-right: 20px;
@@ -911,6 +955,23 @@ const FlexUlBox = styled.ul`
         }
         p {
           font-size: 13px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    width: 407px;
+    margin-left: 18px;
+    li {
+      width: 86px;
+      margin-right: 15px;
+      figure {
+        figcaption {
+          margin-top: 6px;
+          font-size: 10px;
+          p {
+            font-size: 10px;
+          }
         }
       }
     }

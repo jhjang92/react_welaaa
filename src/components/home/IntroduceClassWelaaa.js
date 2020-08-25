@@ -129,56 +129,58 @@ function IntroduceClassWelaaa() {
           </h3>
           <h3>윌라에서 최초 공개합니다!</h3>
         </header>
-        <FlexUlBox className="section_list-content">
-          <li>
-            <figure>
-              <img src="images/introduce/5_1.png" alt="유튜브 안내서"></img>
-              <a href="#">
-                <img src="images/introduce/ic_play.png" alt="보러가기"></img>
-              </a>
-              <figcaption>
-                <span>1인 크리에이터를 위한 유튜브 안내서</span>
-                <p>이필성</p>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="images/introduce/5_2.png" alt=""></img>
-              <a href="#">
-                <img src="images/introduce/ic_play.png" alt="보러가기"></img>
-              </a>
-              <figcaption>
-                <span>시가 필요한 순간</span>
-                <p>정재찬</p>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="images/introduce/5_3.png" alt=""></img>
-              <a href="#">
-                <img src="images/introduce/ic_play.png" alt="보러가기"></img>
-              </a>
-              <figcaption>
-                <span>위클리 스타트업 스터디 20</span>
-                <p>임정욱</p>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="images/introduce/5_4.png" alt=""></img>
-              <a href="#">
-                <img src="images/introduce/ic_play.png" alt="보러가기"></img>
-              </a>
-              <figcaption>
-                <span>잡생각을 아이디어로 바꾸는 아이디어 메이커</span>
-                <p>인기 PD와 작가 4인</p>
-              </figcaption>
-            </figure>
-          </li>
-        </FlexUlBox>
+        <UlBox>
+          <FlexUl className="section_list-content">
+            <li>
+              <figure>
+                <img src="images/introduce/5_1.png" alt="유튜브 안내서"></img>
+                <a href="#">
+                  <img src="images/introduce/ic_play.png" alt="보러가기"></img>
+                </a>
+                <figcaption>
+                  <span>1인 크리에이터를 위한 유튜브 안내서</span>
+                  <p>이필성</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="images/introduce/5_2.png" alt=""></img>
+                <a href="#">
+                  <img src="images/introduce/ic_play.png" alt="보러가기"></img>
+                </a>
+                <figcaption>
+                  <span>시가 필요한 순간</span>
+                  <p>정재찬</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="images/introduce/5_3.png" alt=""></img>
+                <a href="#">
+                  <img src="images/introduce/ic_play.png" alt="보러가기"></img>
+                </a>
+                <figcaption>
+                  <span>위클리 스타트업 스터디 20</span>
+                  <p>임정욱</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <img src="images/introduce/5_4.png" alt=""></img>
+                <a href="#">
+                  <img src="images/introduce/ic_play.png" alt="보러가기"></img>
+                </a>
+                <figcaption>
+                  <span>잡생각을 아이디어로 바꾸는 아이디어 메이커</span>
+                  <p>인기 PD와 작가 4인</p>
+                </figcaption>
+              </figure>
+            </li>
+          </FlexUl>
+        </UlBox>
       </ArticleClassList>
     </SectionClassWelaaa>
   );
@@ -238,6 +240,7 @@ const ArticleClassSlide = styled.article`
     }
   }
   @media (max-width: 1023px) {
+    width: 768px;
     header {
       font-size: 22px;
       h3 {
@@ -247,8 +250,9 @@ const ArticleClassSlide = styled.article`
   }
   @media (max-width: 768px) {
     width: 100%;
-    padding: 0px 18px 13px;
+    padding: 0;
     header {
+      padding-left: 18px;
       text-align: left;
       h3 {
         font-size: 29px;
@@ -269,6 +273,18 @@ const ArticleClassSlide = styled.article`
         letter-spacing: -1.25px;
         line-height: 1.5em;
         margin: 0 0 10px 0;
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    header {
+      h3 {
+        font-size: 24px;
+        letter-spacing: -0.6px;
+      }
+      p {
+        font-size: 14px;
+        letter-spacing: -0.6px;
       }
     }
   }
@@ -457,6 +473,7 @@ const ArticleClassList = styled.article`
   }
   @media (max-width: 1023px) {
     header {
+      width: 768px;
       h3 {
         font-size: 30px;
         :last-of-type {
@@ -469,8 +486,11 @@ const ArticleClassList = styled.article`
     header {
       width: 580px;
       h3 {
-        font-size: 20px !important;
+        font-size: 20px;
         font-weight: 300;
+        :last-of-type {
+          font-size: 20px;
+        }
         span {
           font-weight: 300;
           ::after {
@@ -481,12 +501,31 @@ const ArticleClassList = styled.article`
       }
     }
   }
+  @media screen and (max-width: 480px) {
+    header {
+      width: 100%;
+      h3 {
+        font-size: 18px;
+        :last-of-type {
+          font-size: 18px;
+        }
+      }
+    }
+  }
 `;
-const FlexUlBox = styled.ul`
-  width: 1024px;
+const UlBox = styled.div`
   margin: 40px auto 168px;
+  @media (max-width: 768px) {
+    margin: 40px 0 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+`;
+const FlexUl = styled.ul`
+  width: 1024px;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
   li {
     width: 162px;
     margin-right: 25px;
@@ -534,9 +573,11 @@ const FlexUlBox = styled.ul`
       }
     }
   }
+  @media (max-width: 1023px) {
+    width: 768px;
+  }
   @media (max-width: 768px) {
     width: 580px;
-    margin: 40px auto 50px;
     li {
       width: 115px;
       margin-right: 20px;
@@ -564,6 +605,24 @@ const FlexUlBox = styled.ul`
         }
         p {
           font-size: 13px;
+          letter-spacing: -0.6px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    width: 407px;
+    margin-left: 18px;
+    li {
+      width: 86px;
+      margin-right: 15px;
+      figure {
+        figcaption {
+          margin-top: 6px;
+          font-size: 10px;
+          p {
+            font-size: 10px;
+          }
         }
       }
     }

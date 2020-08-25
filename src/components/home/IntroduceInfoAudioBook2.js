@@ -137,6 +137,13 @@ const SectionAudioBook = styled.section`
       }
     }
   }
+  @media screen and (max-width: 480px) {
+    padding: 40px 18px 36px;
+    h3 {
+      font-size: 24px;
+      letter-spacing: -0.6px;
+    }
+  }
 `;
 const Ul = styled.ul`
   width: 1160px;
@@ -231,6 +238,24 @@ const Figure = styled.figure`
   @media (max-width: 768px) {
     img {
       width: 70px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    padding: 19px 0 19px 0;
+    img {
+      width: 52px;
+      height: 52px;
+    }
+    figcaption {
+      strong {
+        font-size: 16px;
+      }
+      p {
+        font-size: 12px;
+      }
+      ::after {
+        bottom: -20px;
+      }
     }
   }
 `;

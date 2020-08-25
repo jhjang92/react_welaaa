@@ -44,7 +44,7 @@ const SectionBanner = styled.section`
   }
   @media (max-width: 1023px) {
     background: url("images/web-banner/200723_MO4.jpg") center / cover;
-    height: 1290px;
+    height: 179.166vw;
   }
 `;
 const FlexBox = styled.div`
