@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styled, { css } from "styled-components";
 import { useInitState, useInitDispatch } from "../welaaaContext";
 
@@ -7,15 +7,15 @@ function HeaderMobile() {
   const state = useInitState();
   const dispatch = useInitDispatch();
   const menuList = useRef();
+  const [open, setOpen] = useState(false);
+
   const onToggleBurgurMenu = () => {
     dispatch({
-      type: "BURGERMENU",
+      type: "BURGER_MENU",
     });
   };
   const onToggleHeaderSearchBar = () => {
-    dispatch({
-      type: "SEARCHBAR",
-    });
+    setOpen(!open);
   };
   const onToggleBurgerAccordion = (e) => {
     console.log(e.currentTarget.parentNode);
@@ -46,7 +46,7 @@ function HeaderMobile() {
             <img src="images/icons/ic-search.png" alt="검색창 열기"></img>
           </button>
         </div>
-        <HeaderSearchBar className="search-bar" open={state.searchBar}>
+        <HeaderSearchBar className="search-bar" open={open}>
           <button
             type="button"
             className="search-close"
@@ -198,7 +198,7 @@ function HeaderMobile() {
   );
 }
 
-export default React.memo(HeaderMobile);
+export default HeaderMobile;
 
 const Header = styled.header`
   position: fixed;

@@ -6,7 +6,6 @@ import HeaderMobile from "./HeaderMobile";
 function Header() {
   console.log("HEADER");
   const state = useInitState();
-  console.log("state", state.device);
 
   return <>{state.device ? <HeaderMobile /> : <HeaderWeb />}</>;
 }

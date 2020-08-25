@@ -1,15 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
-import { useInitDispatch, useInitState } from "../welaaaContext";
 function HeaderWeb() {
   console.log("HeaderWeb");
-  const dispatch = useInitDispatch();
-  const state = useInitState();
+  const [open, setOpen] = useState(false);
 
-  const onToggleAllMenu = () =>
-    dispatch({
-      type: "ALLMENU",
-    });
+  const onToggleAllMenu = () => {
+    setOpen(!open);
+  };
 
   return (
     <Header>
@@ -47,7 +44,7 @@ function HeaderWeb() {
       </HeaderTopBox>
       <HeaderGnbBox className="header_gnb-box">
         <HeaderGnbMediaBox>
-          <HeaderGnbNav open={state.allMenu}>
+          <HeaderGnbNav open={open}>
             <ul>
               <li>
                 <a href="#">윌라 소개</a>
@@ -79,7 +76,7 @@ function HeaderWeb() {
             <a href="#">윌라 멤버십 소개</a>
           </HeaderSnbBox>
         </HeaderGnbMediaBox>
-        <HeaderGnbAllMenu open={state.allMenu}>
+        <HeaderGnbAllMenu open={open}>
           <AllMenuBox>
             <div>
               <span>클래스</span>
@@ -436,7 +433,7 @@ const HeaderGnbAllMenu = styled.div`
 `;
 const AllMenuBox = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;

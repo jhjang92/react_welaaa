@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useReducer,
-  useState,
-  useRef,
-} from "react";
+import React, { createContext, useContext, useReducer } from "react";
 
 // 사이트의 각종 상태값들 정의
 // ex) 팝업창 true,false여부
@@ -12,9 +6,7 @@ import React, {
 // device: true === mobile , false === web
 const initStateWelaaa = {
   device: false,
-  allMenu: false,
   burgerMenu: false,
-  searchBar: false,
 };
 
 function mainReducer(state, action) {
@@ -24,12 +16,8 @@ function mainReducer(state, action) {
         ...state,
         device: action.device,
       };
-    case "ALLMENU":
-      return { ...state, allMenu: !state.allMenu };
-    case "BURGERMENU":
+    case "BURGER_MENU":
       return { ...state, burgerMenu: !state.burgerMenu };
-    case "SEARCHBAR":
-      return { ...state, searchBar: !state.searchBar };
     default:
       throw new Error(`Unhandled action type: $(action.type)`);
   }

@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect, useMemo } from "react";
 import styled, { css, createGlobalStyle } from "styled-components";
 
 import Header from "./components/commons/Header";
@@ -9,14 +9,13 @@ import { useInitState, useInitDispatch } from "./components/welaaaContext";
 function App() {
   console.log("APP");
   const state = useInitState();
+  const burgerMenu = state.burgerMenu;
   const dispatch = useInitDispatch();
   const resizeState = useRef(false);
 
   useLayoutEffect(() => {
     console.log("useLayoutEffect");
     function updateResize() {
-      console.log(window.innerWidth);
-      console.log(window.outerWidth);
       if (
         window.outerWidth <= 1023 ||
         (window.innerWidth <= 1023 && !resizeState.current)
@@ -26,10 +25,7 @@ function App() {
           type: "DEVICE",
           device: true,
         });
-      } else if (
-        window.outerWidth >= 1024 ||
-        (window.innerWidth >= 1024 && resizeState.current)
-      ) {
+      } else if (window.innerWidth >= 1024 && resizeState.current) {
         resizeState.current = false;
         dispatch({
           type: "DEVICE",
@@ -43,7 +39,7 @@ function App() {
 
   return (
     <>
-      <GlobalStyle open={state.burgerMenu} />
+      <GlobalStyle open={burgerMenu} />
       <Header />
       {/* 나중에 라우터로 main을 분기할예정. 홈일땐 HomeMain class일땐 ClassMain */}
       <HomeMain />
