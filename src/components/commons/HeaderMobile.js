@@ -328,6 +328,7 @@ const HeaderMenuAll = styled.div`
         border-radius: 5px;
         font-weight: bold;
         display: block;
+        cursor: pointer;
       }
     }
     /* 카테고리 목록 Ul - 아코디언메뉴 */
