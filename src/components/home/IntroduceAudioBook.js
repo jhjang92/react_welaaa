@@ -1,7 +1,74 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 
 function IntroduceAudioBook() {
+  const ul = useRef(null);
+  const prevBtn = useRef(null);
+  const nextBtn = useRef(null);
+  useEffect(() => {
+    const ulTarget = ul.current;
+    let list = Array.prototype.slice.call(ul.current.childNodes);
+    let initZindex = -1;
+    let sumType = true;
+    let transX = -100,
+      transZ = -710;
+    // 초기 zIndex 세팅
+    list.map((li) => {
+      li.style.zIndex = initZindex;
+      li.style.transform = `translate3d(${transX}px, 0px, ${transZ}px) rotate(0deg)`;
+      if (initZindex === 1) {
+        sumType = false;
+      }
+      if (sumType) {
+        initZindex++;
+        transX += 50;
+        transZ += 355;
+      } else {
+        initZindex--;
+        transX = 0;
+        transX += 50;
+        transZ -= 355;
+      }
+    });
+    function slide(btn) {
+      let slideZindex = -1;
+      let slideType = true;
+      let slideTransX = -100,
+        slideTransZ = -710;
+      // prepend , append로 맨앞,맨뒤에 요소 추가함으로써 slide동작
+      btn === "prev"
+        ? ulTarget.prepend(list[list.length - 1])
+        : ulTarget.append(list[0]);
+      list = Array.prototype.slice.call(ul.current.childNodes);
+
+      // transform 재정의
+      list.map((li) => {
+        li.className = "";
+        li.style.zIndex = slideZindex;
+        li.style.transform = `translate3d(${slideTransX}px, 0px, ${slideTransZ}px) rotate(0deg)`;
+        if (slideZindex === 1) {
+          li.className = "active";
+          slideType = false;
+        }
+        if (slideType) {
+          slideZindex++;
+          slideTransX += 50;
+          slideTransZ += 355;
+        } else {
+          slideZindex--;
+          slideTransX = 0;
+          slideTransX += 50;
+          slideTransZ -= 355;
+        }
+      });
+    }
+    prevBtn.current.addEventListener("click", () => {
+      slide("prev");
+    });
+    nextBtn.current.addEventListener("click", () => {
+      slide("next");
+    });
+  }, []);
   return (
     <SectionAudioBook className="section_content-audiobook">
       <h2>읽어주는 책 윌라 오디오북</h2>
@@ -19,7 +86,7 @@ function IntroduceAudioBook() {
         <SlideContentBox className="section_slide-content">
           <SlidePositionBox className="slide-position">
             <SlidePerspective className="slide-perspective">
-              <SlideListBox>
+              <SlideListBox ref={ul}>
                 <li>
                   <p>6월 이달의책</p>
                   <MonthBookFlexBox className="MonthBook">
@@ -310,13 +377,13 @@ function IntroduceAudioBook() {
               </SlideListBox>
             </SlidePerspective>
           </SlidePositionBox>
-          <button type="button">
+          <button type="button" ref={prevBtn}>
             <img
               src="images/introduce/ic-angle-left-primary-xl.png"
               alt="왼쪽버튼"
             ></img>
           </button>
-          <button type="button">
+          <button type="button" ref={nextBtn}>
             <img
               src="images/introduce/ic-angle-right-primary-xl.png"
               alt="오른쪽버튼"
@@ -567,20 +634,11 @@ const SlidePerspective = styled.div`
     margin: 0 auto;
   }
 `;
-// 슬라이드 3d position 옵션
-// 좌우간격 transform : 50px
-// 깊이간격 -355px
-// 메인 z-index 1
-//  양쪽서브 z-index 0
-//  각 뎁스당 양쪽 동일하게 z-index -1 씩
-//  총 3개의 이미지만 로드 되며 그 뒤에 있는 img 들은 로딩속도를 고려해서 빈 img 인듯
-//  data src 로 범위안에 왔을때 이미지 추가 - 처음엔 보여지는부분 3개만 존재
-
 const SlideListBox = styled.ul`
   position: absolute;
   padding: 20px 0;
   display: flex;
-  transform: translate3d(-48px, 0, 0);
+  transform: translate3d(-295px, 0, 0);
   transform-style: preserve-3d;
   li {
     width: 248px;
@@ -619,32 +677,6 @@ const SlideListBox = styled.ul`
       :after {
         background: rgba(0, 0, 0, 0);
       }
-    }
-
-    /* 임시 postion 코드 js로 세팅 */
-    :nth-of-type(1) {
-      transform: translate3d(-50px, 0px, -355px) rotateX(0deg) rotateY(0deg);
-      z-index: 0;
-    }
-    :nth-of-type(2) {
-      background: rgb(253, 168, 178);
-      transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg);
-      z-index: 1;
-    }
-    :nth-of-type(3) {
-      background: rgb(128, 120, 181);
-      transform: translate3d(50px, 0px, -355px) rotateX(0deg) rotateY(0deg);
-      z-index: 0;
-    }
-    :nth-of-type(4) {
-      background: rgb(131, 185, 248);
-      transform: translate3d(100px, 0px, -710px) rotateX(0deg) rotateY(0deg);
-      z-index: -1;
-    }
-    :nth-of-type(5) {
-      background: rgb(128, 120, 181);
-      transform: translate3d(100px, 0px, -1065px) rotateX(0deg) rotateY(0deg);
-      z-index: -2;
     }
   }
   @media (max-width: 1023px) {

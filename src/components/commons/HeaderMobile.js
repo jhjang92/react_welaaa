@@ -6,7 +6,7 @@ function HeaderMobile() {
   console.log("HeaderMobile");
   const state = useInitState();
   const dispatch = useInitDispatch();
-  const menuList = useRef();
+  const menuList = useRef(null);
   const [open, setOpen] = useState(false);
 
   const onToggleBurgurMenu = () => {
