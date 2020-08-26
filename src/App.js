@@ -7,14 +7,12 @@ import Footer from "./components/commons/Footer";
 import { useInitState, useInitDispatch } from "./components/welaaaContext";
 
 function App() {
-  console.log("APP");
   const state = useInitState();
   const burgerMenu = state.burgerMenu;
   const dispatch = useInitDispatch();
   const resizeState = useRef(false);
 
   useLayoutEffect(() => {
-    console.log("useLayoutEffect");
     function updateResize() {
       if (
         window.outerWidth <= 1023 ||

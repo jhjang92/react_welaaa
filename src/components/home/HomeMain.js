@@ -14,10 +14,8 @@ import IntroduceAdBanner from "./IntroduceAdBanner";
 import styled from "styled-components";
 
 function HomeMain() {
-  console.log("HomeMain");
   return (
     <Main>
-      {/* 섹션마다 백그라운드이미지 추가하기. 1200 / 640 cover */}
       {/* Banner Section */}
       <div className="IntroduceBanner">
         <IntroduceBanner1 />

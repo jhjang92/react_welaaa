@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 function HeaderWeb() {
-  console.log("HeaderWeb");
   const [open, setOpen] = useState(false);
 
   const onToggleAllMenu = () => {

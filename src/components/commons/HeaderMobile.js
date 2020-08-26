@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 import { useInitState, useInitDispatch } from "../welaaaContext";
 
 function HeaderMobile() {
-  console.log("HeaderMobile");
   const state = useInitState();
   const dispatch = useInitDispatch();
   const menuList = useRef(null);
@@ -18,7 +17,6 @@ function HeaderMobile() {
     setOpen(!open);
   };
   const onToggleBurgerAccordion = (e) => {
-    console.log(e.currentTarget.parentNode);
     e.currentTarget.parentNode.classList.toggle("open");
   };
   return (

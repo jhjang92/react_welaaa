@@ -37,7 +37,6 @@ function IntroduceClassWelaaa() {
     });
 
     function handleTouchStart(e) {
-      console.log("ASDasd");
       xDown = e.touches[0].clientX;
     }
     function handleTouchMove(e) {
@@ -51,11 +50,9 @@ function IntroduceClassWelaaa() {
       /*most significant*/
       if (xDiff > 0) {
         /* left swipe */
-        console.log("LEFT");
         slide("next");
       } else {
         /* right swipe */
-        console.log("RIGHT");
         slide("prev");
       }
 
