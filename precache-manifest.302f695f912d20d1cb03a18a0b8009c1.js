@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8aebff9692d8e1fee32b809f7ee64395",
+    "revision": "4b8241a3ad817bf0cf200aa6b145d3ff",
     "url": "/react_welaaa/index.html"
   },
   {
-    "revision": "1274c4c24eb48f546786",
+    "revision": "6babeba359870001e5e6",
     "url": "/react_welaaa/static/css/main.373f8bae.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react_welaaa/static/js/2.09f58f04.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1274c4c24eb48f546786",
-    "url": "/react_welaaa/static/js/main.168fb907.chunk.js"
+    "revision": "6babeba359870001e5e6",
+    "url": "/react_welaaa/static/js/main.bd1496e4.chunk.js"
   },
   {
     "revision": "ebd2682da6a0aa0ba2b3",
