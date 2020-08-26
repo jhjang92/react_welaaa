@@ -142,6 +142,10 @@ const SectionAudioBook = styled.section`
     h3 {
       font-size: 24px;
       letter-spacing: -0.6px;
+      span {
+        font-size: 24px;
+        letter-spacing: -0.6px;
+      }
     }
   }
 `;
@@ -211,7 +215,7 @@ const Figure = styled.figure`
       width: 110px;
     }
     figcaption {
-      margin-left: 20px;
+      margin-left: 10px;
       width: 100%;
       transform: unset;
       display: flex;

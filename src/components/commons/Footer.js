@@ -180,6 +180,7 @@ const FooterTop = styled.div`
   }
   @media (max-width: 460px) {
     width: calc(100% - 20px);
+    height: 45px;
     .footer_menu {
       li {
         a {

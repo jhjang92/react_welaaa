@@ -146,6 +146,18 @@ const SectionBookBox = styled.section`
       }
     }
   }
+  @media screen and (max-width: 480px) {
+    header {
+      p {
+        strong {
+          font-size: 24px;
+          span {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
 `;
 const UlBox = styled.div`
   overflow: auto;
