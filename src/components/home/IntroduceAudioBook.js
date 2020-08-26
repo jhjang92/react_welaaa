@@ -12,10 +12,24 @@ function IntroduceAudioBook() {
     let sumType = true;
     let transX = -100,
       transZ = -710;
+    let xDown = null,
+      xUp = null,
+      xDiff = null;
+
+    const bgColor = [
+      "rgb(253, 168, 178)",
+      "rgb(128, 120, 181)",
+      "rgb(131, 185, 248)",
+      "rgb(191, 207, 132)",
+      "rgb(242, 169, 249)",
+      "rgb(246, 206, 141)",
+      "rgb(199, 192, 192)",
+    ];
     // 초기 zIndex 세팅
     list.map((li) => {
       li.style.zIndex = initZindex;
       li.style.transform = `translate3d(${transX}px, 0px, ${transZ}px) rotate(0deg)`;
+      li.style.background = bgColor[Math.floor(Math.random() * bgColor.length)];
       if (initZindex === 1) {
         sumType = false;
       }
@@ -30,6 +44,38 @@ function IntroduceAudioBook() {
         transZ -= 355;
       }
     });
+
+    function handleTouchStart(e) {
+      console.log("ASDasd");
+      xDown = e.touches[0].clientX;
+    }
+    function handleTouchMove(e) {
+      if (!xDown) {
+        return;
+      }
+      xUp = e.touches[0].clientX;
+      xDiff = xDown - xUp;
+    }
+    function handleTouchEnd(e) {
+      /*most significant*/
+      if (xDiff > 0) {
+        /* left swipe */
+        console.log("LEFT");
+        slide("next");
+      } else {
+        /* right swipe */
+        console.log("RIGHT");
+        slide("prev");
+      }
+
+      /* reset values */
+      xDown = null;
+      xUp = null;
+      xDiff = null;
+    }
+    ulTarget.addEventListener("touchstart", handleTouchStart);
+    ulTarget.addEventListener("touchmove", handleTouchMove);
+    ulTarget.addEventListener("touchend", handleTouchEnd);
     function slide(btn) {
       let slideZindex = -1;
       let slideType = true;
@@ -629,9 +675,12 @@ const SlidePerspective = styled.div`
   height: 100%;
   overflow: hidden;
   @media (max-width: 768px) {
-    width: 260px;
+    width: 378px;
 
     margin: 0 auto;
+  }
+  @media screen and (max-width: 480px) {
+    width: 360px;
   }
 `;
 const SlideListBox = styled.ul`
@@ -683,9 +732,9 @@ const SlideListBox = styled.ul`
   }
   @media (max-width: 768px) {
     padding: 10px 0;
-    transform: translate3d(-65px, 0, 0);
+    transform: translate3d(-137px, 0, 0);
     li {
-      width: 129px;
+      width: 130px;
       height: unset;
       > p {
         height: 18px;
@@ -697,6 +746,9 @@ const SlideListBox = styled.ul`
         width: 80px;
       }
     }
+  }
+  @media screen and (max-width: 480px) {
+    transform: translate3d(-147px, 0, 0);
   }
 `;
 // 콘텐츠영역에 두개의 정보가 제공되므로 레이아웃잡기위한 Box

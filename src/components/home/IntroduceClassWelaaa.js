@@ -5,6 +5,7 @@ function IntroduceClassWelaaa() {
   const ul = useRef(null);
   const prevBtn = useRef(null);
   const nextBtn = useRef(null);
+
   useEffect(() => {
     const ulTarget = ul.current;
     let list = Array.prototype.slice.call(ul.current.childNodes);
@@ -12,6 +13,10 @@ function IntroduceClassWelaaa() {
     let sumType = true;
     let transX = -100,
       transZ = -710;
+    let xDown = null,
+      xUp = null,
+      xDiff = null;
+
     // 초기 zIndex 세팅
     list.map((li) => {
       li.style.zIndex = initZindex;
@@ -30,6 +35,39 @@ function IntroduceClassWelaaa() {
         transZ -= 355;
       }
     });
+
+    function handleTouchStart(e) {
+      console.log("ASDasd");
+      xDown = e.touches[0].clientX;
+    }
+    function handleTouchMove(e) {
+      if (!xDown) {
+        return;
+      }
+      xUp = e.touches[0].clientX;
+      xDiff = xDown - xUp;
+    }
+    function handleTouchEnd(e) {
+      /*most significant*/
+      if (xDiff > 0) {
+        /* left swipe */
+        console.log("LEFT");
+        slide("next");
+      } else {
+        /* right swipe */
+        console.log("RIGHT");
+        slide("prev");
+      }
+
+      /* reset values */
+      xDown = null;
+      xUp = null;
+      xDiff = null;
+    }
+    ulTarget.addEventListener("touchstart", handleTouchStart);
+    ulTarget.addEventListener("touchmove", handleTouchMove);
+    ulTarget.addEventListener("touchend", handleTouchEnd);
+
     function slide(btn) {
       let slideZindex = -1;
       let slideType = true;
@@ -411,9 +449,12 @@ const SlidePerspective = styled.div`
   height: 100%;
   overflow: hidden;
   @media (max-width: 768px) {
-    width: 260px;
+    width: 378px;
 
     margin: 0 auto;
+  }
+  @media screen and (max-width: 480px) {
+    width: 360px;
   }
 `;
 const SlideListBox = styled.ul`
@@ -457,9 +498,9 @@ const SlideListBox = styled.ul`
   }
   @media (max-width: 768px) {
     padding: 10px 0;
-    transform: translate3d(-65px, 0, 0);
+    transform: translate3d(-137px, 0, 0);
     li {
-      width: 129px;
+      width: 130px;
       height: unset;
       > p {
         height: 18px;
@@ -471,6 +512,9 @@ const SlideListBox = styled.ul`
         width: 80px;
       }
     }
+  }
+  @media screen and (max-width: 480px) {
+    transform: translate3d(-147px, 0, 0);
   }
 `;
 // ClassList Article
