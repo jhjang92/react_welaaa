@@ -7,6 +7,7 @@
 - React
 - Javascript
 - Styled Components
+- Semantic Markup
 - Hook
   - useRef
   - useState
