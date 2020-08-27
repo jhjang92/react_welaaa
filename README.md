@@ -2,6 +2,19 @@
 
 리액트를 사용하여 실제 사이트를 클론코딩 합니다.
 
+## Project Stack
+
+- React
+- Javascript
+- Styled Components
+- Hook
+  - useRef
+  - useState
+  - useContext
+  - useReducer
+  - useLayoutEffect
+  - useEffect
+
 ### 첫 시작은 퍼블리싱부터
 
 예전에 일을 할때 아무것도 모른채 테이블코딩으로 admin 페이지를 유지보수 했었습니다.
